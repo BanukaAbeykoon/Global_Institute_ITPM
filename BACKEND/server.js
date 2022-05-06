@@ -30,6 +30,7 @@ const courseRouter=require("./routes/Courses/course");
 const staffRouter=require("./routes/Staff/staff");
 
 //import route Library
+const LibraryRoutes = require("./routes/Library/Library");
 
 
 //import routes students
@@ -46,6 +47,7 @@ app.use(courseRouter);
 app.use(staffRouter);
 
 //route middleware Library
+app.use(LibraryRoutes);
 
 
 //route midddleware Student
