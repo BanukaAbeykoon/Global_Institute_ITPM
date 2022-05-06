@@ -27,7 +27,7 @@ mongoose.connect(URL)
 const courseRouter=require("./routes/Courses/course");
 
 //import staff route
-
+const staffRouter=require("./routes/Staff/staff");
 
 //import route Library
 
@@ -43,7 +43,7 @@ const courseRouter=require("./routes/Courses/course");
 //app.use course router
 app.use(courseRouter);
 //app.use staff router
-
+app.use(staffRouter);
 
 //route middleware Library
 
