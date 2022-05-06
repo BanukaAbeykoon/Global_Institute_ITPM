@@ -25,7 +25,7 @@ import StaffDashboard from './components/StaffManagement/StaffDashboard';
 import StaffPostDetails from './components/StaffManagement/StaffPostDetails';
 import StaffAcademichome from './components/StaffManagement/StaffAcademichome';
 import StaffNonacademichome from './components/StaffManagement/StaffNonacademichome';
-
+import StaffSignup from './components/StaffManagement/StaffSignup';
 
 
 //Library components
@@ -59,32 +59,26 @@ export default class App extends Component {
           <Route path="/course/:id" component={CoursePostDetails}></Route>
           <Route path="/CourseReport" component={CourseReport}></Route>
 
+
+
           <Route path="/StaffAdminHome" component={StaffAdminHome}></Route>
-          <Route
-            path="/StaffAdminCreatePost"
-            component={StaffAdminCreatePost}
-          ></Route>
+          <Route path="/StaffAdminCreatePost" component={StaffAdminCreatePost}></Route>
           <Route path="/staffedit/:id" component={StaffAdminUpdate}></Route>
           <Route path="/staff/:id" component={StaffPostDetails}></Route>
           <Route path="/StaffDashboard" component={StaffDashboard}></Route>
-          <Route
-            path="/StaffAcademichome"
-            component={StaffAcademichome}
-          ></Route>
-          <Route
-            path="/StaffNonacademichome"
-            component={StaffNonacademichome}
-          ></Route>
+          <Route path="/StaffAcademichome" component={StaffAcademichome}></Route>
+          <Route path="/StaffNonacademichome" component={StaffNonacademichome}></Route>
+          <Route path="/StaffSignup" component={StaffSignup}></Route>
+
+
+
         </div>
 
         <Route path="/LBDashboard" exact component={LBDashboard}></Route>
         <Route path="/LBrowse" component={LibraryHome}></Route>
         <Route path="/AddLB" component={LibraryCreatePost}></Route>
         <Route path="/EditLB/:id" component={LibraryEditPost}></Route>
-        <Route
-          path="/LibraryPostDetails/:id"
-          Ccomponent={LibraryPostDetails}
-        ></Route>
+        <Route path="/LibraryPostDetails/:id" Ccomponent={LibraryPostDetails}></Route>
       </BrowserRouter>
     );
   }
