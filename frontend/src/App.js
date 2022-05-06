@@ -23,6 +23,8 @@ import StaffAdminUpdate from './components/StaffManagement/StaffAdminUpdate';
 import StaffAdminHome from './components/StaffManagement/StaffAdminHome';
 import StaffDashboard from './components/StaffManagement/StaffDashboard';
 import StaffPostDetails from './components/StaffManagement/StaffPostDetails';
+import StaffAcademichome from './components/StaffManagement/StaffAcademichome';
+import StaffNonacademichome from './components/StaffManagement/StaffNonacademichome';
 
 //Library components
 
@@ -54,7 +56,8 @@ export default class App extends Component {
          <Route path="/staffedit/:id" component={StaffAdminUpdate}></Route>
          <Route path="/staff/:id" component={StaffPostDetails}></Route>
          <Route path="/StaffDashboard" component={StaffDashboard}></Route>
-
+         <Route path="/StaffAcademichome" component={StaffAcademichome}></Route>
+         <Route path="/StaffNonacademichome" component={StaffNonacademichome}></Route>
 
 
 
