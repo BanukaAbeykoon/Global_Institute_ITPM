@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
 //  import {Routes} from 'react-router-dom';
 
-
+import NavBar   from './components/NavBar';
 
 //import Courses
 
@@ -18,8 +18,11 @@ import  CourseReport from './components/CourseManagement/CourseReport';
 
 
 // import Staff
-
-
+import StaffAdminCreatePost from './components/StaffManagement/StaffAdminCreatePost';
+import StaffAdminUpdate from './components/StaffManagement/StaffAdminUpdate';
+import StaffAdminHome from './components/StaffManagement/StaffAdminHome';
+import StaffDashboard from './components/StaffManagement/StaffDashboard';
+import StaffPostDetails from './components/StaffManagement/StaffPostDetails';
 
 //Library components
 
@@ -35,9 +38,7 @@ export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-       
-
-       
+       {window.location.pathname !== "/" && <NavBar />}
 
         <div className="container">
 
@@ -48,8 +49,11 @@ export default class App extends Component {
          <Route path="/course/:id"   component={CoursePostDetails}></Route>
          <Route path="/CourseReport"   component={CourseReport}></Route>
           
-
-          
+         <Route path="/StaffAdminHome" component={StaffAdminHome}></Route>
+         <Route path="/StaffAdminCreatePost"component={StaffAdminCreatePost}></Route>
+         <Route path="/staffedit/:id" component={StaffAdminUpdate}></Route>
+         <Route path="/staff/:id" component={StaffPostDetails}></Route>
+         <Route path="/StaffDashboard" component={StaffDashboard}></Route>
 
 
 
