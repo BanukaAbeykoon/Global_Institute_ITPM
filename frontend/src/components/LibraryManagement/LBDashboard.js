@@ -59,7 +59,7 @@ class LBDashboard extends Component {
               <br />
               <div class="row">
                 <div class="col-sm-4">
-                  <div class="card">
+                  <div class="cardb">
                     <img
                       src="lb.jpg"
                       width="400"
@@ -67,9 +67,9 @@ class LBDashboard extends Component {
                       class="card-img-top"
                       alt="..."
                     />
-                    <div class="card-body">
+                    <div class="cardb-body">
                       {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                      <button className="btn btn-primary">
+                      <button className="cardb-button">
                         <a
                           href="/LBrowse"
                           style={{ textDecoration: "none", color: "white" }}
@@ -82,8 +82,9 @@ class LBDashboard extends Component {
                     </div>
                   </div>
                 </div>
+
                 <div class="col-sm-4">
-                  <div class="card">
+                  <div class="cardb">
                     <img
                       src="rlb.jpg"
                       width="400"
@@ -91,31 +92,47 @@ class LBDashboard extends Component {
                       class="card-img-top"
                       alt="..."
                     />
-                    <div class="card-body">
-                      <a href="/LReserve" class="btn btn-primary">
-                        Reserved Books
-                      </a>
+                    <div class="cardb-body">
+                      {/* <a href="/CourseHome" class="btn btn-primary"> */}
+                      <button className="cardb-button">
+                        <a
+                          href="/LBReserveHome"
+                          style={{ textDecoration: "none", color: "white" }}
+                        >
+                          Reserved Books
+                        </a>{" "}
+                      </button>
+
+                      {/* </a> */}
                     </div>
                   </div>
                 </div>
+
                 <div class="col-sm-4">
-                  <div class="card">
+                  <div class="cardb">
                     <img
                       src="lreport.jpg"
-                      width="300"
+                      width="400"
                       height="400"
                       class="card-img-top"
                       alt="..."
                     />
-                    <div class="card-body">
-                      <a href="/LReport" class="btn btn-primary">
-                        Report
-                      </a>
+                    <div class="cardb-body">
+                      {/* <a href="/CourseHome" class="btn btn-primary"> */}
+                      <button className="cardb-button">
+                        <a
+                          href="/LBRDashboard"
+                          style={{ textDecoration: "none", color: "white" }}
+                        >
+                          Report
+                        </a>{" "}
+                      </button>
+
+                      {/* </a> */}
                     </div>
                   </div>
                 </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
-              </div>{" "}
+              </div>
               &nbsp; &nbsp;
             </div>
             &nbsp; &nbsp;
