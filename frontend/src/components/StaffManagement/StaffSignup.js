@@ -34,6 +34,8 @@ export default class StaffSignup extends Component{
       })
     }
 
+    //validation
+
     validate = () => {
       let nameError = "";
       let subjectError = "";
