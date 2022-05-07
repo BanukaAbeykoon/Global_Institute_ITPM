@@ -286,12 +286,13 @@ export default class LBReserveEdit extends Component {
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}> date</label>
             <input
-              type="text"
+              type="date"
               className="form-control"
               name="date"
               placeholder="Enter Date"
               value={this.state.date}
               onChange={this.handleInputChange}
+              max={moment().format("YYYY-MM-DD")}
             />
 
             <div style={{ fontSize: 12, color: "red" }}>

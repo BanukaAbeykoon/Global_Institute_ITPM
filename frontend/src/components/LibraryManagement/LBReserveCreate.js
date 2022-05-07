@@ -259,7 +259,7 @@ export default class LBReserveCreate extends Component {
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Date</label>
             <input
-              type="text"
+              type="date"
               className="form-control"
               name="date"
               placeholder="Enter Book Status"

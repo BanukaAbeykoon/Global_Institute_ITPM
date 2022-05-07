@@ -6,7 +6,7 @@ export default class LibraryCreatePost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bookid: "",
+      bookid: Date.now(),
       bookname: "",
       author: "",
       relatedmodule: "",
@@ -212,6 +212,7 @@ export default class LibraryCreatePost extends Component {
               placeholder="Enter Book ID"
               value={this.state.bookid}
               onChange={this.handleInputChange}
+              readOnly
             />
             <div style={{ fontSize: 12, color: "red" }}>
               {this.state.bookidError}
