@@ -9,15 +9,15 @@ export default class CourseCreatePost extends Component {
     super(props);
     this.state = {
       courseName:"",
-      courseID:"",
+      courseID:Date.now(),//Enrollment key
       subject:"",
       date:"",
       fee:"",
-      courseNameError:",",
-      courseIDError:",",
-      subjectError:",",
-      dateError:",",
-      feeError:","
+      courseNameError:"",
+      courseIDError:"",
+      subjectError:"",
+      dateError:"",
+      feeError:""
     };
   }
 
@@ -132,8 +132,9 @@ export default class CourseCreatePost extends Component {
       <form className="needs-validation" noValidate>
         
 
-        <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
+        {/* <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Course ID </label>
+          readonly
           <input type="text"
           className="form-control"
           name="courseID"
@@ -143,7 +144,7 @@ export default class CourseCreatePost extends Component {
           <div style={{ fontSize: 12, color: "red" }}>
                     {this.state.courseIDError}
         </div>
-        </div>
+        </div> */}
 
         <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Course Name </label>
