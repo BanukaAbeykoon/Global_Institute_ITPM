@@ -26,7 +26,7 @@ import StaffPostDetails from './components/StaffManagement/StaffPostDetails';
 import StaffAcademichome from './components/StaffManagement/StaffAcademichome';
 import StaffNonacademichome from './components/StaffManagement/StaffNonacademichome';
 import StaffSignup from './components/StaffManagement/StaffSignup';
-
+import StaffLogin from './components/StaffManagement/StaffLogin';
 
 //Library components
 import LibraryHome from "./components/LibraryManagement/LibraryHome";
@@ -69,7 +69,7 @@ export default class App extends Component {
           <Route path="/StaffAcademichome" component={StaffAcademichome}></Route>
           <Route path="/StaffNonacademichome" component={StaffNonacademichome}></Route>
           <Route path="/StaffSignup" component={StaffSignup}></Route>
-
+          <Route path="/StaffLogin" component={StaffLogin}></Route>
 
 
         </div>

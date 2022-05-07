@@ -54,7 +54,7 @@ class MainDashboard extends Component {
                     <div class="card-body">
                       <h5 class="card-title">Staff Management</h5>
 
-                      <a href="/matDash" class="btn btn-primary">
+                      <a href="/StaffLogin" class="btn btn-primary">
                         Staff Management
                       </a>
                     </div>
