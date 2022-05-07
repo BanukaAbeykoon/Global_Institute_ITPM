@@ -78,7 +78,7 @@ class SideNav extends Component {
                   <a href="/Coursedashboard">Dashboard</a>
                   <a href="/Paymentdashboard">Payments</a>
                 </div>
-              </div>
+             
 
             </li>
             <br />
