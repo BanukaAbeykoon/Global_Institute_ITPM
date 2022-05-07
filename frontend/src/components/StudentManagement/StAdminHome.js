@@ -68,7 +68,7 @@ class Studentdashboard extends Component {
               <div class="card">
                 <img
                   src="stadmin.jpg"
-                  width="400"
+                  width="300"
                   height="400"
                   class="card-img-top"
                   alt="..."
@@ -91,7 +91,7 @@ class Studentdashboard extends Component {
               <div class="card">
                 <img
                   src="rp.jpg"
-                  width="300"
+                  width="900"
                   height="400"
                   class="card-img-top"
                   alt="..."
