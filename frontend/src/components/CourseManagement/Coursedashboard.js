@@ -81,7 +81,7 @@ class Coursedashboard extends Component {
                   Course Outlines and in the Program of Studies (POSs) for individual programs.
                   </p>
                   {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                  <button className="btn btn-primary"><a href="/CourseHome" style={{textDecoration:'none',color:'white'}}>All Courses</a> </button>
+                  <button className="btn btn-primary"><a href="/Enrol" style={{textDecoration:'none',color:'white'}}>All Courses</a> </button>
                    
                   {/* </a> */}
                 </div>

@@ -11,7 +11,8 @@ import CourseEditPost   from './components/CourseManagement/CourseEditPost';
 import CourseHome   from './components/CourseManagement/CourseHome';
 import CoursePostDetails   from './components/CourseManagement/CoursePostDetails';
 import Coursedashboard from './components/CourseManagement/Coursedashboard';
-import  CourseReport from './components/CourseManagement/CourseReport';
+import CourseReport from './components/CourseManagement/CourseReport';
+import CourseEnrollement from './components/CourseManagement/CourseEnrollement';
 
 
 
@@ -58,6 +59,7 @@ export default class App extends Component {
           <Route path="/edit/:id" component={CourseEditPost}></Route>
           <Route path="/course/:id" component={CoursePostDetails}></Route>
           <Route path="/CourseReport" component={CourseReport}></Route>
+          <Route path="/Enrol"   component={CourseEnrollement}></Route>
 
 
 

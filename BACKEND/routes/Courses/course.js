@@ -88,4 +88,43 @@ router.put('/course/update/:id',(req,res)=>{
     });
 });
 
+//Enrol
+
+router.post('/Enrol', async(req,res) => {
+    try{
+            const {courseName, courseID} = req.body;
+
+            if(!courseName || !courseID){
+
+                return res.status(400).json({error: "Please fill  all data"})
+
+            }
+            //check with database courseName
+            const Enrol = await course.findOne({courseName: courseName});
+            //console.log(studentLogin);
+  if(!Enrol){
+
+                res.status(400).json({error: "Course does not exists"});
+            }
+            else if (courseID == Enrol.courseID){
+                 res.json({message: "Course Enrollement  Successfull"});
+
+                console.log(res.status.error);
+
+            }else{
+
+                res.status(400).json({error: "Invalid Credientials"});
+            }
+
+    }catch(err){
+
+        console.log(err);
+
+    }
+
+
+});
+
+
+
 module.exports = router;
