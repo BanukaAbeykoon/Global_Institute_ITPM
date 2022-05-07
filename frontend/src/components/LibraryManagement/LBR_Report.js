@@ -276,7 +276,7 @@ export default class LBR_Report extends Component {
                   type="donload-button"
                   style={{ backgroundColor: "#E74C3C ", padding: "2px" }}
                   class="btn btn-secondary btn-sm"
-                  onClick={() => generatePDF(this.state.Library)}
+                  onClick={() => generatePDF(this.state.LBReserve)}
                 >
                   Downloard As
                   <div class="docs">
