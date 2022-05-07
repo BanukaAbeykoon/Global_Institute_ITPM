@@ -87,28 +87,7 @@ class Coursedashboard extends Component {
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <img
-                  src="py.jpg"
-                  width="400"
-                  height="400"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Payments</h5>
-                  <p class="card-text">
-                  Payment is the transfer of money or goods and services in exchange for a product or service. 
-                  Payments are typically made after the terms have been agreed upon by all parties involved.
-                   
-                  </p>
-                  <a href="#" class="btn btn-primary">
-               Payments
-                  </a>
-                </div>
-              </div>
-            </div>
+            
             <div class="col-sm-4">
               <div class="card">
                 <img

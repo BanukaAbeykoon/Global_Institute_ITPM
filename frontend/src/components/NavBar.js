@@ -65,7 +65,7 @@ class SideNav extends Component {
                   <div className="dropdown-content">
                   <a href="/Coursedashboard">Dashboard</a>
                   <a href="/CourseHome">Courses Home</a>
-                  <a href="/HomeLSmaterial">Paymets</a>
+                  
               
              
             
@@ -81,8 +81,7 @@ class SideNav extends Component {
                 </button>
                   <div className="dropdown-content">
                   <a href="/Coursedashboard">Dashboard</a>
-                  <a href="/CourseHome">Courses Home</a>
-                  <a href="/HomeLSmaterial">Paymets</a>
+                  <a href="/Paymentdashboard">Payments</a>
               
              
             
@@ -145,6 +144,7 @@ class SideNav extends Component {
                   <a href="/StaffReport">Staff</a>
                   <a href="/CourseReport">Courses</a>
                   <a href="/LBReport">Library</a>
+                  <a href="/PaymentReport">Payments</a>
               
              
             
