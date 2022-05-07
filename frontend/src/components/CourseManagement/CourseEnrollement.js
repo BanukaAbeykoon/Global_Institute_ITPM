@@ -1,9 +1,7 @@
 import axios from "axios";
 import React, {useState} from "react";
 import Swal from "sweetalert2";
-//import { useNavigate } from 'react-router-dom';
 
-//import "../../css/login.css";
 
 export default function CourseEnrollement(props){
     //let navigate = useNavigate();
@@ -45,7 +43,7 @@ console.log("hello");
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Please Check Your Username & Password!',
+            text: 'Please Check Your courseName & courseID!',
             showClass: {
               popup: 'animate_animated animate_fadeInDown'
             },
@@ -69,16 +67,16 @@ console.log("hello");
                       <h4>Welcome Back</h4>
                       <h6 id="AdminLoginError" style={{color:"red"}}>{errorMsg}</h6>
                       <div class="col-12">
-                          <label>Username</label>
-                          <input type="text" name="username" class="form-control" placeholder="Username"  onChange={(e) => {
+                          <label>Course Name</label>
+                          <input type="text" name="courseName" class="form-control" placeholder="courseName"  onChange={(e) => {
                           setcourseName(e.target.value);
                         }}  required/>
                       </div>
                       <div class="col-12">
-                          <label>Password</label>
+                          <label>Course ID</label>
                           <i></i>
                     
-                          <input type="password" name="password" class="form-control" placeholder="Password"  onChange={(e) => {
+                          <input type="password" name="courseID" class="form-control" placeholder="courseID"  onChange={(e) => {
                           setcourseID(e.target.value);
                         }}/>
                       </div>
@@ -94,7 +92,7 @@ console.log("hello");
                   </form>
                   <hr class="mt-4"/>
                   <div class="col-12">
-                      <p class="text-center mb-0">Have not account yet? <a href="/CourseHome">Signup</a></p>
+                      <p class="text-center mb-0">Have not account yet? <a href="#">Signup</a></p>
                   </div>
               </div>
           </div>
