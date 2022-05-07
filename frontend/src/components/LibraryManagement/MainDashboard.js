@@ -33,7 +33,7 @@ class MainDashboard extends Component {
                     <div class="card-body">
                       <h5 class="card-title">Student Management</h5>
 
-                      <a href="#" class="btn btn-primary">
+                      <a href="/Studentdashboard" class="btn btn-primary">
                         Student Management
                       </a>
                     </div>

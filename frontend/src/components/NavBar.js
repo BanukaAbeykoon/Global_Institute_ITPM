@@ -30,7 +30,7 @@ class SideNav extends Component {
                 </button>
                   <div className="dropdown-content">
                   <a href="/Studentdashboard">Dashboard</a>
-                  <a href="/StudentHome">Student Home</a>
+                 
                   
                   </div>
               </div>
@@ -124,6 +124,7 @@ class SideNav extends Component {
                
                </button>
                   <div className="dropdown-content">
+                  <a href="/StAdminHome">Student Admin Page</a>
                   <a href="/StaffAdminHome">Staff Admin Page</a>
               
              
