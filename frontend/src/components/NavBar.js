@@ -7,11 +7,9 @@ class SideNav extends Component {
       <div id="wrapper" className="toggled">
         <div id="sidebar-wrapper">
           <ul className="sidebar-nav">
-            
             &nbsp; &nbsp; &nbsp;
             <img
               src="%PUBLIC_URL%../../../global.png"
-              
               class="rounded-circle"
               width="200"
               height="200"
@@ -19,141 +17,103 @@ class SideNav extends Component {
             />
             <br />
             <br />
-          
-
             <li>
-            <div className="dropdown">
+              <div className="dropdown">
                 <button className="dropbtn">
-              
-                <i class="fas fa-sort-amount-up-alt"></i>
-                &nbsp; STUDENTS
+                  <i class="fas fa-sort-amount-up-alt"></i>
+                  &nbsp; STUDENTS
                 </button>
-                  <div className="dropdown-content">
+                <div className="dropdown-content">
                   <a href="/Studentdashboard">Dashboard</a>
-                 
-                  
-                  </div>
+                </div>
               </div>
-             
             </li>
-            <br/>
+            <br />
             <li>
-            <div className="dropdown">
+              <div className="dropdown">
                 <button className="dropbtn">
-             
-                <i class="fas fa-sort-amount-up-alt"></i>
-                &nbsp; STAFF
+                  <i class="fas fa-sort-amount-up-alt"></i>
+                  &nbsp; STAFF
                 </button>
-                  <div className="dropdown-content">
+                <div className="dropdown-content">
                   <a href="/StaffLogin">Dashboard</a>
                   <a href="/StaffAcademichome">Academic Home</a>
                   <a href="/StaffNonacademichome">NonAcademic Home</a>
                   <a href="/StaffReport">Report</a>
-                  </div>
+                </div>
               </div>
             </li>
-            <br/>
-            
-              
-              <li>
+            <br />
+            <li>
               <div className="dropdown">
                 <button className="dropbtn">
-               
                   <i class="fas fa-cubes"></i>
                   &nbsp; COURSES
-                  </button>
-                  <div className="dropdown-content">
+                </button>
+                <div className="dropdown-content">
                   <a href="/Coursedashboard">Dashboard</a>
                   <a href="/CourseHome">Courses Home</a>
-                  
-              
-             
-            
-            </div>
-            </div>
+                </div>
+              </div>
             </li>
-            <br/>
+            <br />
             <li>
-            <div className="dropdown">
+              <div className="dropdown">
                 <button className="dropbtn">
-                <i class="fab fa-product-hunt"></i>
-                &nbsp; PAYMENTS
+                  <i class="fab fa-product-hunt"></i>
+                  &nbsp; PAYMENTS
                 </button>
-                  <div className="dropdown-content">
+                <div className="dropdown-content">
                   <a href="/Coursedashboard">Dashboard</a>
                   <a href="/Paymentdashboard">Payments</a>
-              
-             
-            
-            </div>
-            </div>
-              
+                </div>
+              </div>
             </li>
-            <br/>
+            <br />
             <li>
-            <div className="dropdown">
+              <div className="dropdown">
                 <button className="dropbtn">
-
                   <i class="fas fa-sort-amount-up-alt"></i>
                   &nbsp; LIBRARY
-                  </button>
-                  <div className="dropdown-content">
+                </button>
+                <div className="dropdown-content">
                   <a href="/LBDashboard">Dashboard</a>
                   <a href="/LBrowse">Browse For Books</a>
-                  <a href="/LReserve">Reserved Books</a>
-                  <a href="/LReport">Report</a>
-              
-             
-            
-            </div>
-            </div>
-                 
-               
-               
-                  
-                
+                  <a href="/LBReserveHome">Reserved Books</a>
+                  <a href="/LBRDashboard">Report</a>
+                </div>
+              </div>
             </li>
-            <br/>
+            <br />
             <li>
-            <div className="dropdown">
-               
-              <button className="abtn">
-                <i class="fas fa-tasks"></i>
-                &nbsp; ADMIN
-               
-               </button>
-                  <div className="dropdown-content">
+              <div className="dropdown">
+                <button className="abtn">
+                  <i class="fas fa-tasks"></i>
+                  &nbsp; ADMIN
+                </button>
+                <div className="dropdown-content">
                   <a href="/StAdminHome">Student Admin Page</a>
                   <a href="/StaffAdminHome">Staff Admin Page</a>
-              
-             
-            
-            </div>
-            </div>
-             
+                </div>
+              </div>
             </li>
-            <br/>
+            <br />
             <li>
-            <div className="dropdown">
+              <div className="dropdown">
                 <button className="dropbtn">
-                <i class="fas fa-file-invoice-dollar"></i>
-                &nbsp; REPORTS
+                  <i class="fas fa-file-invoice-dollar"></i>
+                  &nbsp; REPORTS
                 </button>
-                  <div className="dropdown-content">
+                <div className="dropdown-content">
                   <a href="/Streport">Student</a>
                   <a href="/StaffReport">Staff</a>
                   <a href="/CourseReport">Courses</a>
                   <a href="/LBReport">Library</a>
                   <a href="/PaymentReport">Payments</a>
-              
-             
-            
-            </div>
-            </div>
-             
+                </div>
+              </div>
             </li>
-            <br/>
-        
+            <br />
           </ul>
         </div>
 
@@ -175,11 +135,7 @@ class SideNav extends Component {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="/"
-                  >
+                  <a className="nav-link active" aria-current="page" href="/">
                     HOME
                   </a>
                 </li>
