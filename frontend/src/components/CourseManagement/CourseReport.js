@@ -89,7 +89,7 @@ export default class CourseHome extends Component {
             <div id="page-content-wrapper"></div>
           <div className ="container-sm">
           <div className="row">
-          <div className="col-lg-9 mt-2 mb-2" >
+          <div className="col-lg-9 mt-2 mb-2" style={{color: 'yellow'}}>
             <h4>All Courses</h4>
             </div>
             <div className ="col-lg-3 mt-2 mb-2">
@@ -104,7 +104,7 @@ export default class CourseHome extends Component {
               </div>
               </div>
               </div>
-            <table className="table" >
+            <table className="table" style={{color: '#FFFFFF',marginTop:'40px'}}>
               <thead>
                 <tr>
                   <th scope="col">#</th>
