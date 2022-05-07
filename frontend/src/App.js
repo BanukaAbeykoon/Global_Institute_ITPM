@@ -44,6 +44,13 @@ import LibraryEditPost from "./components/LibraryManagement/LibraryEditPost";
 import LibraryPostDetails from "./components/LibraryManagement/LibraryPostDetails";
 import LBDashboard from "./components/LibraryManagement/LBDashboard";
 import MainDashboard from "./components/LibraryManagement/MainDashboard";
+import LBReport from "./components/LibraryManagement/LBReport";
+import LBReserveCreate from "./components/LibraryManagement/LBReserveCreate";
+import LBReserveHome from "./components/LibraryManagement/LBReserveHome";
+import LBReserveEdit from "./components/LibraryManagement/LBReserveEdit";
+import LBR_Report from "./components/LibraryManagement/LBR_Report";
+import LBRDashboard from "./components/LibraryManagement/LBRDashboard";
+import Librarian from "./components/LibraryManagement/Librarian";
 
 
 //Student Components
@@ -77,53 +84,60 @@ export default class App extends Component {
           <Route path="/edit/:id" component={CourseEditPost}></Route>
           <Route path="/course/:id" component={CoursePostDetails}></Route>
           <Route path="/CourseReport" component={CourseReport}></Route>
-          <Route path="/Enrol"   component={CourseEnrollement}></Route>
+          <Route path="/Enrol" component={CourseEnrollement}></Route>
 
-          <Route path="/Paymentdashboard"   component={Paymentdashboard}></Route>
-         <Route path="/PaymentHome"   component={PaymentHome}></Route>
-         <Route path="/Paymentadd"  component={PaymentCreatePost}></Route>
-         <Route path="/Paymentedit/:id"  component={PaymentEditPost}></Route>
-         <Route path="/Payment/:id"   component={PaymentPostDetails}></Route>
-         <Route path="/PaymentReport"   component={PaymentReport}></Route>
-
-
+          <Route path="/Paymentdashboard" component={Paymentdashboard}></Route>
+          <Route path="/PaymentHome" component={PaymentHome}></Route>
+          <Route path="/Paymentadd" component={PaymentCreatePost}></Route>
+          <Route path="/Paymentedit/:id" component={PaymentEditPost}></Route>
+          <Route path="/Payment/:id" component={PaymentPostDetails}></Route>
+          <Route path="/PaymentReport" component={PaymentReport}></Route>
 
           <Route path="/StaffAdminHome" component={StaffAdminHome}></Route>
-          <Route path="/StaffAdminCreatePost" component={StaffAdminCreatePost}></Route>
+          <Route
+            path="/StaffAdminCreatePost"
+            component={StaffAdminCreatePost}
+          ></Route>
           <Route path="/staffedit/:id" component={StaffAdminUpdate}></Route>
           <Route path="/staff/:id" component={StaffPostDetails}></Route>
           <Route path="/StaffDashboard" component={StaffDashboard}></Route>
-          <Route path="/StaffAcademichome" component={StaffAcademichome}></Route>
-          <Route path="/StaffNonacademichome" component={StaffNonacademichome}></Route>
+          <Route
+            path="/StaffAcademichome"
+            component={StaffAcademichome}
+          ></Route>
+          <Route
+            path="/StaffNonacademichome"
+            component={StaffNonacademichome}
+          ></Route>
           <Route path="/StaffSignup" component={StaffSignup}></Route>
           <Route path="/StaffLogin" component={StaffLogin}></Route>
           <Route path="/StaffReport" component={StaffReport}></Route>
 
-          <Route path="/Studentdashboard"   component={Studentdashboard}></Route>
-          <Route path="/StudentHome"   component={StudentHome}></Route>
-          <Route path="/StReports"   component={StReports}></Route>
-          <Route path="/StudentReg"   component={StudentReg}></Route>
-          <Route path="/StAdminHome"   component={StAdminHome}></Route>
-          <Route path="/StudentLogin"   component={StudentLogin}></Route>
-          <Route path="/StHome"   component={StHome}></Route>
-          <Route path="/studentadd"  component={StudentCreatePost}></Route>
-          <Route path="/studentedit/:id"  component={StudentEditPost}></Route>
-          <Route path="/student/:id"   component={StudentPostDetails}></Route>
-          <Route path="/student/:id"   component={StudentPostDetails}></Route>
-
-
-
-
-
-
-
-      </div>
+          <Route path="/Studentdashboard" component={Studentdashboard}></Route>
+          <Route path="/StudentHome" component={StudentHome}></Route>
+          <Route path="/StReports" component={StReports}></Route>
+          <Route path="/StudentReg" component={StudentReg}></Route>
+          <Route path="/StAdminHome" component={StAdminHome}></Route>
+          <Route path="/StudentLogin" component={StudentLogin}></Route>
+          <Route path="/StHome" component={StHome}></Route>
+          <Route path="/studentadd" component={StudentCreatePost}></Route>
+          <Route path="/studentedit/:id" component={StudentEditPost}></Route>
+          <Route path="/student/:id" component={StudentPostDetails}></Route>
+          <Route path="/student/:id" component={StudentPostDetails}></Route>
+        </div>
 
         <Route path="/LBDashboard" exact component={LBDashboard}></Route>
         <Route path="/LBrowse" component={LibraryHome}></Route>
+        <Route path="/LBReport" component={LBReport}></Route>
         <Route path="/AddLB" component={LibraryCreatePost}></Route>
         <Route path="/EditLB/:id" component={LibraryEditPost}></Route>
-        <Route path="/LibraryPostDetails/:id" Ccomponent={LibraryPostDetails}></Route>
+        <Route path="/Librarian" component={Librarian}></Route>
+        <Route path="/LibraryPostDetails/:id"component={LibraryPostDetails}></Route>
+        <Route path="/AddLBR" component={LBReserveCreate}></Route>
+        <Route path="/LBReserveHome" component={LBReserveHome}></Route>
+        <Route path="/EditLBR/:id" component={LBReserveEdit}></Route>
+        <Route path="/LBR_Report" component={LBR_Report}></Route>
+        <Route path="/LBRDashboard" component={LBRDashboard}></Route>
       </BrowserRouter>
     );
   }
