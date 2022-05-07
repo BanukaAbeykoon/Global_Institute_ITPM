@@ -1,25 +1,27 @@
 import React, { Component } from "react";
 import axios from "axios";
 import swal from "sweetalert2";
+import moment from "moment";
 
-export default class LibraryCreatePost extends Component {
+export default class LBReserveCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bookid: Date.now(),
-      bookname: "",
-      author: "",
-      relatedmodule: "",
-      bookstatus: "",
+      Book_ID: "",
+      Book_Name: "",
+      NIC: "",
+      pno: "",
+      date: "",
       username: "",
       Password: "",
-      bookidError: ",",
-      booknameError: ",",
-      authorError: ",",
-      relatedmoduleError: ",",
-      bookstatusError: ",",
+      Book_IDError: ",",
+      Book_NameError: ",",
+      NICError: ",",
+      pnoError: ",",
+      dateError: ",",
       usernameError: ",",
       PasswordError: ",",
+     
     };
   }
 
@@ -33,57 +35,57 @@ export default class LibraryCreatePost extends Component {
   };
 
   validate = () => {
-    let bookidError = "";
-    let booknameError = "";
-    let authorError = "";
-    let relatedmoduleError = "";
-    let bookstatusError = "";
+    let Book_IDError = "";
+    let Book_NameError = "";
+    let NICError = "";
+    let pnoError = "";
+    let dateError = "";
     let usernameError = "";
     let PasswordError = "";
 
-    if (!this.state.bookid) {
-      bookidError = "* BookID is Required!";
+    if (!this.state.Book_ID) {
+      Book_IDError = "* Book ID is Required!";
     }
 
-    if (!this.state.bookname) {
-      booknameError = "* Book Name is Required!";
+   if (!this.state.Book_Name) {
+     Book_NameError = "* Book Name is Required!";
+   }
+
+    if (!this.state.NIC) {
+      NICError = "* NIC is Required!";
     }
 
-    if (!this.state.author) {
-      authorError = "* Author is Required!";
+    if (!this.state.pno) {
+      pnoError = "* Phone Number is Required!";
     }
 
-    if (!this.state.relatedmodule) {
-      relatedmoduleError = "* Related Module is Required!";
-    }
+    if (!this.state.date) {
+      dateError = "* Date is Required!";
+      }
+      
+      if (!this.state.username) {
+        usernameError = "* Username is Required!";
+      }
 
-    if (!this.state.bookstatus) {
-      bookstatusError = "* Book Status is Required!";
-    }
-
-    if (!this.state.username) {
-      usernameError = "* Username is Required!";
-    }
-
-    if (!this.state.Password) {
-      PasswordError = "* Password is Required!";
-    }
+      if (!this.state.Password) {
+        PasswordError = "* Password is Required!";
+      }
 
     if (
-      bookidError ||
-      booknameError ||
-      authorError ||
-      relatedmoduleError ||
-      bookstatusError ||
+      Book_IDError ||
+      Book_NameError ||
+      NICError ||
+      pnoError ||
+      dateError ||
       usernameError ||
       PasswordError
     ) {
       this.setState({
-        bookidError,
-        booknameError,
-        authorError,
-        relatedmoduleError,
-        bookstatusError,
+        Book_IDError,
+        Book_NameError,
+        NICError,
+        pnoError,
+        dateError,
         usernameError,
         PasswordError,
       });
@@ -98,42 +100,37 @@ export default class LibraryCreatePost extends Component {
 
     const isValid = this.validate();
 
-    const {
-      bookid,
-      bookname,
-      author,
-      relatedmodule,
-      bookstatus,
-      username,
-      Password,
-    } = this.state;
+    const { Book_ID, Book_Name, NIC, pno, date, username, Password, } =
+      this.state;
 
     if (isValid) {
       const data = {
-        bookid: bookid,
-        bookname: bookname,
-        author: author,
-        relatedmodule: relatedmodule,
-        bookstatus: bookstatus,
+        Book_ID: Book_ID,
+        Book_Name: Book_Name,
+        NIC: NIC,
+        pno: pno,
+        date: date,
         username: username,
         Password: Password,
       };
       console.log(data);
 
-      axios.post("http://localhost:8000/Library/save", data).then((res) => {
+      axios.post("http://localhost:8000/LBReserve/save", data).then((res) => {
         swal.fire("Saved", "Saved Successfully", "success");
+       
         if (res.data.success) {
           this.setState({
-            bookid: "bookid",
-            bookname: "bookname",
-            author: "author",
-            relatedmodule: "relatedmodule",
-            bookstatus: "bookstatus",
+            Book_ID: "Book_ID",
+            Book_Name: "Book_Name",
+            NIC: "NIC",
+            pno: "pno",
+            date: "date",
             username: "username",
             Password: "Password",
           });
         }
-        window.location.href = "/LBrowse";
+         window.location.href = "/LBReserveHome";
+        //  this.props.history.push("/LBReserveHome");
       });
     }
   };
@@ -177,18 +174,18 @@ export default class LibraryCreatePost extends Component {
                       </li>
                       <li className="nav-item d-none d-sm-inline-block">
                         <a href="/LBDashboard" className="nav-link">
-                          Library Dashboard -
+                          Reserve Books Dashboard -
                         </a>
                       </li>
                       <li className="nav-item d-none d-sm-inline-block">
-                        <a href="/LBrowse" className="nav-link">
-                          Browse For Books -
+                        <a href="/LBReserveHome" className="nav-link">
+                          Library Books Report -
                         </a>
                       </li>
 
                       <li className="nav-item d-none d-sm-inline-block">
-                        <a href="/AddLB" className="nav-link">
-                          Add A New Book
+                        <a href="/AddLBR" className="nav-link">
+                          Add Reserved Books
                         </a>
                       </li>
                     </ul>
@@ -200,22 +197,21 @@ export default class LibraryCreatePost extends Component {
         </div>
         <hr></hr>
         <div className="topic" style={{ color: "yellow" }}>
-          <h1 className="h3 mb-3 font-weight-normal">ADD A NEW BOOK</h1>
+          <h1 className="h3 mb-3 font-weight-normal">ADD Reserved BOOK</h1>
         </div>
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>BookID </label>
+            <label style={{ marginBottom: "5px" }}>Book ID </label>
             <input
               type="number"
               className="form-control"
-              name="bookid"
+              name="Book_ID"
               placeholder="Enter Book ID"
-              value={this.state.bookid}
+              value={this.state.Book_ID}
               onChange={this.handleInputChange}
-              readOnly
             />
             <div style={{ fontSize: 12, color: "red" }}>
-              {this.state.bookidError}
+              {this.state.Book_IDError}
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
@@ -223,55 +219,56 @@ export default class LibraryCreatePost extends Component {
             <input
               type="text"
               className="form-control"
-              name="bookname"
+              name="Book_Name"
               placeholder="Enter Book Name"
-              value={this.state.bookname}
+              value={this.state.Book_Name}
               onChange={this.handleInputChange}
             />
             <div style={{ fontSize: 12, color: "red" }}>
-              {this.state.booknameError}
+              {this.state.Book_NameError}
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Author</label>
+            <label style={{ marginBottom: "5px" }}>NIC</label>
             <input
               type="text"
               className="form-control"
-              name="author"
-              placeholder="Enter Author"
-              value={this.state.author}
+              name="NIC"
+              placeholder="Enter NIC"
+              value={this.state.NIC}
               onChange={this.handleInputChange}
             />
             <div style={{ fontSize: 12, color: "red" }}>
-              {this.state.authorError}
+              {this.state.NICError}
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Related Module</label>
+            <label style={{ marginBottom: "5px" }}>Phone number</label>
             <input
               type="text"
               className="form-control"
-              name="relatedmodule"
-              placeholder="Enter Related Module"
-              value={this.state.relatedmodule}
+              name="pno"
+              placeholder="Enter Phone Number"
+              value={this.state.pno}
               onChange={this.handleInputChange}
             />
             <div style={{ fontSize: 12, color: "red" }}>
-              {this.state.relatedmoduleError}
+              {this.state.pnoError}
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Book Status</label>
+            <label style={{ marginBottom: "5px" }}>Date</label>
             <input
-              type="text"
+              type="date"
               className="form-control"
-              name="bookstatus"
+              name="date"
               placeholder="Enter Book Status"
-              value={this.state.bookstatus}
+              value={this.state.date}
               onChange={this.handleInputChange}
+              max={moment().format("YYYY-MM-DD")}
             />
             <div style={{ fontSize: 12, color: "red" }}>
-              {this.state.bookstatusError}
+              {this.state.dateError}
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>

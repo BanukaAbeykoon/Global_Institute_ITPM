@@ -49,6 +49,11 @@ class LBDashboard extends Component {
                                 Library Dashboard -
                               </a>
                             </li>
+                            <li className="nav-item d-none d-sm-inline-block">
+                              <a href="/LBRDashboard" className="nav-link">
+                                Report Dashboard -
+                              </a>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -56,83 +61,47 @@ class LBDashboard extends Component {
                   </div>
                 </div>
               </div>
-              <br />
+              <br /> <br /> <br /> 
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="cardb">
-                    <img
-                      src="lb.jpg"
-                      width="400"
-                      height="400"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="cardb-body">
-                      {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                      <button className="cardb-button">
-                        <a
-                          href="/LBrowse"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          Browse For Books
-                        </a>{" "}
-                      </button>
-
-                      {/* </a> */}
+                <div
+                  class="card"
+                  style={{ opacity: "75%", width: "80%", left: "10%" }}
+                >
+                  <div class="card-header"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Monthly Report</h5>
+                    <p class="card-text">
+                      Click hear to get the mothly report of all the Library
+                      Book Details
+                    </p>
+                    <a href="LBReport" class="btn btn-primary">
+                      Library Books Report
+                    </a>
+                  </div>
+                </div>
+                <hr></hr>
+                <br /> <br />
+                <div
+                  class="card"
+                  style={{ opacity: "75%", width: "80%", left: "10%" }}
+                >
+                  <div class="card">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                      <h5 class="card-title">Monthly Report</h5>
+                      <p class="card-text">
+                        Click hear to get the mothly report of all the
+                        student/staff Details that who use the books in the
+                        Library
+                      </p>
+                      <a href="LBR_Report" class="btn btn-primary">
+                        Library Book Users Report
+                      </a>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-sm-4">
-                  <div class="cardb">
-                    <img
-                      src="rlb.jpg"
-                      width="400"
-                      height="400"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="cardb-body">
-                      {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                      <button className="cardb-button">
-                        <a
-                          href="/LBReserveHome"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          Reserved Books
-                        </a>{" "}
-                      </button>
-
-                      {/* </a> */}
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-4">
-                  <div class="cardb">
-                    <img
-                      src="lreport.jpg"
-                      width="400"
-                      height="400"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="cardb-body">
-                      {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                      <button className="cardb-button">
-                        <a
-                          href="/LBRDashboard"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          Report
-                        </a>{" "}
-                      </button>
-
-                      {/* </a> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
+              </div>{" "}
               &nbsp; &nbsp;
             </div>
             &nbsp; &nbsp;

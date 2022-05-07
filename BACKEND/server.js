@@ -31,6 +31,7 @@ const staffRouter=require("./routes/Staff/staff");
 
 //import route Library
 const LibraryRoutes = require("./routes/Library/Library");
+const LBReserveRoutes = require("./routes/Library/LBReserve");
 
 //import route payment
 const paymentRouter=require("./routes/Payments/payment");
@@ -49,6 +50,7 @@ app.use(staffRouter);
 
 //route middleware Library
 app.use(LibraryRoutes);
+app.use(LBReserveRoutes);
 
 //app.use payment router
 app.use(paymentRouter);

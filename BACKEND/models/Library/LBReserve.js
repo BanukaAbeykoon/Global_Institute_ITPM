@@ -2,23 +2,24 @@
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
-  bookid: {
+ 
+  Book_ID: {
     type: String,
     required: true,
   },
-  bookname: {
+  Book_Name: {
     type: String,
     required: true,
   },
-  author: {
+  NIC: {
     type: String,
     required: true,
   },
-  relatedmodule: {
+  pno: {
     type: String,
     required: true,
   },
-  bookstatus: {
+  date: {
     type: String,
     required: true,
   },
@@ -31,4 +32,4 @@ const postSchema = new mongoose.Schema({
     required: true,
   },
 });
-module.exports = mongoose.model("Library", postSchema);
+module.exports = mongoose.model("LBReserve", postSchema);

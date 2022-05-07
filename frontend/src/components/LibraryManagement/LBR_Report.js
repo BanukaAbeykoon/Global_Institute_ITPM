@@ -1,14 +1,49 @@
 import React, { Component } from "react";
 import axios from "axios";
-import swal from "sweetalert2";
-import "./lib.css";
 
-export default class LibraryHome extends Component {
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+
+const generatePDF = (LBReserve) => {
+  const doc = new jsPDF();
+  const tableColumn = [
+    "Book_ID",
+    "Book_Name",
+    "NIC",
+    "pno",
+    "date",
+    "username",
+    "Password",
+  ];
+  const tableRows = [];
+
+  LBReserve.map((LBReserve) => {
+    const LBReservedata = [
+      LBReserve.Book_ID,
+      LBReserve.Book_Name,
+      LBReserve.NIC,
+      LBReserve.pno,
+      LBReserve.date,
+      LBReserve.username,
+      LBReserve.Password,
+    ];
+    tableRows.push(LBReservedata);
+  });
+  doc.text("GLOBAL EDUCATION INSTITUTE", 70, 8).setFontSize(13);
+  doc.text("Library Book Reciever Details Report", 14, 16).setFontSize(13);
+  doc.autoTable(tableColumn, tableRows, {
+    styles: { fontSize: 8 },
+    startY: 35,
+  });
+  doc.save("LBReserve details.pdf");
+};
+
+export default class LBR_Report extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      Library: [],
+      LBReserve: [],
     };
   }
 
@@ -17,40 +52,33 @@ export default class LibraryHome extends Component {
   }
 
   retrievePosts() {
-    axios.get("http://localhost:8000/Library").then((res) => {
+    axios.get("http://localhost:8000/LBReserve").then((res) => {
       if (res.data.success) {
         this.setState({
-          Library: res.data.existingPosts,
+          LBReserve: res.data.LBReservePosts,
         });
 
-        console.log(this.state.Library);
+        console.log(this.state.LBReserve);
       }
     });
   }
 
-  onDelete = (id) => {
-    axios.delete(`http://localhost:8000/Library/delete/${id}`).then((res) => {
-      swal.fire("Delete", "Deleted Successfully", "success");
-      this.retrievePosts();
-    });
-  };
-
-  filterData(Library, searchKey) {
-    const result = Library.filter(
-      (Library) =>
-        Library.bookid.toLowerCase().includes(searchKey) ||
-        Library.bookname.toLowerCase().includes(searchKey) ||
-        Library.bookstatus.toLowerCase().includes(searchKey)
+  filterData(LBReserve, searchKey) {
+    const result = LBReserve.filter(
+      (LBReserve) =>
+        LBReserve.pno.toLowerCase().includes(searchKey) ||
+        LBReserve.Book_Name.toLowerCase().includes(searchKey) ||
+        LBReserve.NIC.toLowerCase().includes(searchKey)
     );
-    this.setState({ Library: result });
+    this.setState({ LBReserve: result });
   }
 
   handleSearchArea = (e) => {
     const searchKey = e.currentTarget.value;
 
-    axios.get(`http://localhost:8000/Library`).then((res) => {
+    axios.get(`http://localhost:8000/LBReserve`).then((res) => {
       if (res.data.success) {
-        this.filterData(res.data.existingPosts, searchKey);
+        this.filterData(res.data.LBReservePosts, searchKey);
       }
     });
   };
@@ -99,13 +127,18 @@ export default class LibraryHome extends Component {
                             </li>
                             <li className="nav-item d-none d-sm-inline-block">
                               <a href="/LBDashboard" className="nav-link">
-                                Library Dashboard -
+                                LBReserve Dashboard -
                               </a>
                             </li>
 
                             <li className="nav-item d-none d-sm-inline-block">
-                              <a href="/LBrowse" className="nav-link">
-                                Browse For Books -
+                              <a href="/LBRDashboard" className="nav-link">
+                                Report Dashboard -
+                              </a>
+                            </li>
+                            <li className="nav-item d-none d-sm-inline-block">
+                              <a href="/LBR_Report" className="nav-link">
+                                Library Book Report -
                               </a>
                             </li>
                           </ul>
@@ -116,56 +149,6 @@ export default class LibraryHome extends Component {
                 </div>
               </div>
               <hr></hr>
-              {/* 
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Book ID</th>
-                    <th scope="col">Book Name</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Book Related Module</th>
-                    <th scope="col">Book Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.state.posts.map((posts, index) => (
-                    <tr key={index}>
-                      <th scope="row">{index + 1}</th>
-
-                      <td>
-                        <a
-                          href={`/post/${posts._id}`}
-                          style={{ textDecoration: "none" }}
-                        >
-                          {posts.bookid}
-                        </a>
-                      </td>
-
-                      <td>{posts.bookname} </td>
-                      <td>{posts.author} </td>
-                      <td>{posts.relatedmodule} </td>
-                      <td>{posts.bookstatus} </td>
-                      <td>
-                        <a
-                          className="btn btn-warning"
-                          href={`/edit/${posts._id}`}
-                        >
-                          <i className="fas fa-edit"></i>&nbsp;Edit
-                        </a>
-                        &nbsp;
-                        <a
-                          className="btn btn-danger"
-                          href="#"
-                          onClick={() => this.onDelete(posts._id)}
-                        >
-                          <i className="fas fa-trash-alt"></i>&nbsp;Delete
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table> */}
               <div
                 class="form-check"
                 style={{
@@ -254,75 +237,92 @@ export default class LibraryHome extends Component {
                 </div>
               </div>
               <hr></hr>
-              <br />
-              {/* <button className="btn btn-success">
-                <a
-                  href="/AddLB"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  ADD NEW BOOK
-                </a>
-              </button> */}
-              <button class="button-56" role="button">
-                <a
-                  href="/Librarian"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
-                  Librarian
-                </a>
-              </button>
-              <hr></hr>
-              <br /> <br />
-              <div class="row">
-                {this.state.Library.map((Library, index) => (
-                  <div class="col-sm-4">
-                    <div class="card" style={{ width: "18rem" }}>
-                      {/* <img
-                  src="%PUBLIC_URL%../../fut.png"
-                  width="400"
-                  height="400"
-                  class="card-img-top"
-                  alt="..."
-                /> */}
-
-                      <div class="card-body">
-                        <a
-                          className="btn btn-primary"
-                          href={`/Library/${Library._id}`}
-                          style={{ textDecoration: "none" }}
-                        ></a>
-                        <h5>No.0{index + 1}</h5>
-                        <h6>Book Name:{Library.bookname} </h6>
-                        <h6>Author:{Library.author} </h6>
-                        <h6>Related Module:{Library.relatedmodule} </h6>
-                        <h6>Book Status:{Library.bookstatus} </h6>
-                        <h6>username:{Library.username} </h6>
-                        <h6>Password:{Library.Password} </h6>
-                        {/* <a
-                          className="btn btn-warning"
-                          href={`/EditLB/${Library._id}`}
-                        >
-                          <i className="fas fa-edit"></i>&nbsp;Edit
-                        </a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a
-                          className="btn btn-danger"
-                          href="#"
-                          onClick={() => this.onDelete(Library._id)}
-                        >
-                          <i className="far fa-trash-alt"></i>&nbsp;Delete
-                        </a> */}
-                      </div>
-                    </div>
-                    <br />
-                  </div>
-                ))}
+              <div className="a" style={{ color: "yellow" }}>
+                <h1>Library Books User Report</h1>
               </div>
+              <br />
+              <table class="table table-success">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book ID</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col"> pno </th>
+                    <th scope="col"> date</th>
+                    <th scope="col"> username</th>
+                    <th scope="col"> Password</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.LBReserve.map((LBReserve, index) => (
+                    <tr key={index}>
+                      <th scope="row">{index + 1}</th>
+
+                      <td>{LBReserve.Book_ID}</td>
+                      <td>{LBReserve.Book_Name} </td>
+                      <td>{LBReserve.NIC} </td>
+                      <td>{LBReserve.pno} </td>
+                      <td>{LBReserve.date} </td>
+                      <td>{LBReserve.username} </td>
+                      <td>{LBReserve.Password} </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <br /> <br />
+              <div style={{ float: "left" }}>
+                <button
+                  type="donload-button"
+                  style={{ backgroundColor: "#E74C3C ", padding: "2px" }}
+                  class="btn btn-secondary btn-sm"
+                  onClick={() => generatePDF(this.state.Library)}
+                >
+                  Downloard As
+                  <div class="docs">
+                    <svg
+                      class="css-i6dzq1"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      fill="none"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      height="20"
+                      width="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line y2="13" x2="8" y1="13" x1="16"></line>
+                      <line y2="17" x2="8" y1="17" x1="16"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>{" "}
+                    PDF
+                  </div>
+                  <div class="download">
+                    <svg
+                      class="css-i6dzq1"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      fill="none"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      height="50"
+                      width="50"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+              &nbsp;&nbsp;
             </div>
+            &nbsp;&nbsp;
           </div>
+          &nbsp;&nbsp;
         </div>
       </div>
     );
