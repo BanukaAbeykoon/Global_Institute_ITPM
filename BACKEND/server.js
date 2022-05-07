@@ -34,7 +34,7 @@ const LibraryRoutes = require("./routes/Library/Library");
 
 
 //import routes students
-
+const studentRoutes = require('./routes/Student/student');
 
 
 
@@ -51,6 +51,7 @@ app.use(LibraryRoutes);
 
 
 //route midddleware Student
+app.use(studentRoutes);
 
 
 app.listen(PORT,() => {//function(){}

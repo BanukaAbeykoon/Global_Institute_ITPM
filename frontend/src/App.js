@@ -39,6 +39,15 @@ import MainDashboard from "./components/LibraryManagement/MainDashboard";
 
 
 //Student Components
+import StudentCreatePost   from './components/StudentManagement/StudentCreatePost';
+import StudentEditPost   from './components/StudentManagement/StudentEditPost';
+import StudentHome   from './components/StudentManagement/StudentHome';
+import StudentPostDetails   from './components/StudentManagement/StudentPostDetails';
+import Studentdashboard from './components/StudentManagement/Studentdashboard';
+import StReports from './components/StudentManagement/StReports';
+import StudentReg from './components/StudentManagement/StudentReg';
+import StAdminHome from './components/StudentManagement/StAdminHome';
+
 
 
 
@@ -74,7 +83,23 @@ export default class App extends Component {
           <Route path="/StaffLogin" component={StaffLogin}></Route>
 
 
-        </div>
+          <Route path="/Studentdashboard"   component={Studentdashboard}></Route>
+          <Route path="/StudentHome"   component={StudentHome}></Route>
+          <Route path="/StReports"   component={StReports}></Route>
+          <Route path="/StudentReg"   component={StudentReg}></Route>
+          <Route path="/StAdminHome"   component={StAdminHome}></Route>
+          <Route path="/studentadd"  component={StudentCreatePost}></Route>
+          <Route path="/studentedit/:id"  component={StudentEditPost}></Route>
+          <Route path="/student/:id"   component={StudentPostDetails}></Route>
+          <Route path="/student/:id"   component={StudentPostDetails}></Route>
+
+
+
+
+
+
+
+      </div>
 
         <Route path="/LBDashboard" exact component={LBDashboard}></Route>
         <Route path="/LBrowse" component={LibraryHome}></Route>
