@@ -80,8 +80,8 @@ class SideNav extends Component {
                 &nbsp; PAYMENTS
                 </button>
                   <div className="dropdown-content">
-                  <a href="/Coursedashboard">Dashboard</a>
-                  <a href="/Paymentdashboard">Payments</a>
+                  <a href="/Paymentdashboard">Dashboard</a>
+                  <a href="/PaymentHome">Payments</a>
               
              
             

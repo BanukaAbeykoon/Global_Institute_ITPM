@@ -131,33 +131,24 @@ export default class CourseCreatePost extends Component {
       <h1 className="h3 mb-3 font-weight-normal" style={{color: 'yellow' }}>Create new course </h1>
       <form className="needs-validation" noValidate>
         
+?
 
         {/* <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
-          <label style={{marginBottom:'5px'}} >Course ID </label>
-          readonly
-          <input type="text"
-          className="form-control"
-          name="courseID"
-          placeholder="Enter Course ID"
-          value={this.state.courseID}
-          onChange={this.handleInputChange}/>
-          <div style={{ fontSize: 12, color: "red" }}>
-                    {this.state.courseIDError}
-        </div>
-        </div> */}
-
-        <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Course Name </label>
           <input type="text"
           className="form-control"
           name="courseName"
           placeholder="Enter Course Name"
           value={this.state.courseName}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}
+          readonly
+          />
+          
            <div style={{ fontSize: 12, color: "red" }}>
                     {this.state.courseNameError}
+                   
         </div>
-        </div>
+        </div> */}
 
         <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Subject </label>
