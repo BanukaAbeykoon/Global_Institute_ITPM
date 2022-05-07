@@ -47,14 +47,10 @@ class Studentdashboard extends Component {
                         </li>
                         <li className="nav-item d-none d-sm-inline-block">
                           <a href="/StudentHome" className="nav-link">
-                            student Courses -
+                            Student Home
                           </a>
                         </li>
-                        <li className="nav-item d-none d-sm-inline-block">
-                          <a href="/addph" className="nav-link">
-                            Dash Board -
-                          </a>
-                        </li>
+                        
                       </ul>
                     </div>
                   </div>
@@ -63,11 +59,34 @@ class Studentdashboard extends Component {
             </div>
           </div>
 
+
           <div class="row">
             <div class="col-sm-4">
               <div class="card">
                 <img
-                  src="students.jpg"
+                  src="fac.jpg"
+                  width="400"
+                  height="400"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Faculties</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  {/* <a href="/CourseHome" class="btn btn-primary"> */}
+                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Faculties</a> </button>
+                   
+                  {/* </a> */}
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <img
+                  src="course.jpg"
                   width="400"
                   height="400"
                   class="card-img-top"
@@ -79,30 +98,8 @@ class Studentdashboard extends Component {
                     With supporting text below as a natural lead-in to
                     additional content.
                   </p>
-                  {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Course</a> </button>
-                   
-                  {/* </a> */}
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <img
-                  src="payment.jpg"
-                  width="400"
-                  height="400"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Payments</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
                   <a href="#" class="btn btn-primary">
-               Payments
+               Course
                   </a>
                 </div>
               </div>
@@ -110,25 +107,29 @@ class Studentdashboard extends Component {
             <div class="col-sm-4">
               <div class="card">
                 <img
-                  src="ass.jpg"
+                  src="lib.jpg"
                   width="300"
                   height="400"
                   class="card-img-top"
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Assignment</h5>
+                  <h5 class="card-title">Library</h5>
                   <p class="card-text">
                     With supporting text below as a natural lead-in to
                     additional content.
                   </p>
-                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Assignment</a> </button>
+                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Library</a> </button>
                 </div>
 
               </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
           </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          
           
         </div>
       </div>
