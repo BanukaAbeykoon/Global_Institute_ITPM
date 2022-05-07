@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import swal from "sweetalert2";
-
+import "./lib.css";
 
 export default class LibraryHome extends Component {
   constructor(props) {
@@ -215,7 +215,7 @@ export default class LibraryHome extends Component {
                       <label class="form-check-label" for="exampleRadios2">
                         ALL
                         <div>
-                           &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
                         </div>
                       </label>
                     </div>
@@ -255,14 +255,26 @@ export default class LibraryHome extends Component {
               </div>
               <hr></hr>
               <br />
-              <button className="btn btn-success">
+              {/* <button className="btn btn-success">
                 <a
                   href="/AddLB"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   ADD NEW BOOK
                 </a>
+              </button> */}
+              <button class="button-56" role="button">
+                <a
+                  href="/Librarian"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  Librarian
+                </a>
               </button>
+              <hr></hr>
               <br /> <br />
               <div class="row">
                 {this.state.Library.map((Library, index) => (
@@ -287,7 +299,9 @@ export default class LibraryHome extends Component {
                         <h6>Author:{Library.author} </h6>
                         <h6>Related Module:{Library.relatedmodule} </h6>
                         <h6>Book Status:{Library.bookstatus} </h6>
-                        <a
+                        <h6>username:{Library.username} </h6>
+                        <h6>Password:{Library.Password} </h6>
+                        {/* <a
                           className="btn btn-warning"
                           href={`/EditLB/${Library._id}`}
                         >
@@ -300,7 +314,7 @@ export default class LibraryHome extends Component {
                           onClick={() => this.onDelete(Library._id)}
                         >
                           <i className="far fa-trash-alt"></i>&nbsp;Delete
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                     <br />

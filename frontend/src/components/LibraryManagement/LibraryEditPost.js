@@ -11,11 +11,15 @@ export default class LibraryEditPost extends Component {
       author: "",
       relatedmodule: "",
       bookstatus: "",
+      username: "",
+      Password: "",
       bookidError: ",",
       booknameError: ",",
       authorError: ",",
       relatedmoduleError: ",",
       bookstatusError: ",",
+      usernameError: ",",
+      PasswordError: ",",
     };
   }
 
@@ -34,6 +38,8 @@ export default class LibraryEditPost extends Component {
     let authorError = "";
     let relatedmoduleError = "";
     let bookstatusError = "";
+    let usernameError = "";
+    let PasswordError = "";
 
     if (!this.state.bookname) {
       booknameError = "* Book Name is Required!";
@@ -51,12 +57,22 @@ export default class LibraryEditPost extends Component {
       bookstatusError = "* Book Status is Required!";
     }
 
+    if (!this.state.username) {
+      usernameError = "* Username is Required!";
+    }
+
+    if (!this.state.Password) {
+      PasswordError = "* Password is Required!";
+    }
+
     if (
       bookidError ||
       booknameError ||
       authorError ||
       relatedmoduleError ||
-      bookstatusError
+      bookstatusError ||
+      usernameError ||
+      PasswordError
     ) {
       this.setState({
         bookidError,
@@ -64,6 +80,8 @@ export default class LibraryEditPost extends Component {
         authorError,
         relatedmoduleError,
         bookstatusError,
+        usernameError,
+        PasswordError,
       });
 
       return false;
@@ -77,7 +95,15 @@ export default class LibraryEditPost extends Component {
     const isValid = this.validate();
 
     const id = this.props.match.params.id;
-    const { bookid, bookname, author, relatedmodule, bookstatus } = this.state;
+    const {
+      bookid,
+      bookname,
+      author,
+      relatedmodule,
+      bookstatus,
+      username,
+      Password,
+    } = this.state;
 
     if (isValid) {
       const data = {
@@ -86,6 +112,8 @@ export default class LibraryEditPost extends Component {
         author: author,
         relatedmodule: relatedmodule,
         bookstatus: bookstatus,
+        username: username,
+        Password: Password,
       };
       console.log(data);
 
@@ -102,8 +130,11 @@ export default class LibraryEditPost extends Component {
               author: "",
               relatedmodule: "",
               bookstatus: "",
+              username: "",
+              Password: "",
             });
           }
+          window.location.href = "/LBrowse";
         });
     }
   };
@@ -119,6 +150,8 @@ export default class LibraryEditPost extends Component {
           author: res.data.Library.author,
           relatedmodule: res.data.Library.relatedmodule,
           bookstatus: res.data.Library.bookstatus,
+          username: res.data.Library.username,
+          Password: res.data.Library.Password,
         });
 
         console.log(this.state.Library);
@@ -263,6 +296,38 @@ export default class LibraryEditPost extends Component {
 
             <div style={{ fontSize: 12, color: "red" }}>
               {this.state.bookstatusError}
+            </div>
+          </div>
+
+          <div className="form-group" style={{ marginBottom: "15px" }}>
+            <label style={{ marginBottom: "5px" }}> username</label>
+            <input
+              type="text"
+              className="form-control"
+              name="username"
+              placeholder="Enter username"
+              value={this.state.username}
+              onChange={this.handleInputChange}
+            />
+
+            <div style={{ fontSize: 12, color: "red" }}>
+              {this.state.usernameError}
+            </div>
+          </div>
+
+          <div className="form-group" style={{ marginBottom: "15px" }}>
+            <label style={{ marginBottom: "5px" }}> Password</label>
+            <input
+              type="text"
+              className="form-control"
+              name="Password"
+              placeholder="Enter Password"
+              value={this.state.Password}
+              onChange={this.handleInputChange}
+            />
+
+            <div style={{ fontSize: 12, color: "red" }}>
+              {this.state.PasswordError}
             </div>
           </div>
 
