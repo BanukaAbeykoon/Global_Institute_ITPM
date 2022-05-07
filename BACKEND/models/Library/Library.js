@@ -22,5 +22,13 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  username: {
+    type: String,
+    required: true,
+  },
+  Password: {
+    type: String,
+    required: true,
+  },
 });
 module.exports = mongoose.model("Library", postSchema);
