@@ -1,13 +1,13 @@
 const express = require("express");
-const Library = require("../../models/Library/Library");
+const LBReserve = require("../../models/Library/LBReserve");
 
 const router = express.Router();
 //save posts
 
-router.post("/Library/save", (req, res) => {
-  let newLibrary = new Library(req.body);
+router.post("/LBReserve/save", (req, res) => {
+  let newLBReserve = new LBReserve(req.body);
 
-  newLibrary.save((err) => {
+  newLBReserve.save((err) => {
     if (err) {
       return res.status(400).json({
         error: err,
@@ -20,8 +20,8 @@ router.post("/Library/save", (req, res) => {
 });
 
 //get posts
-router.get("/Library", (req, res) => {
-  Library.find().exec((err, Library) => {
+router.get("/LBReserve", (req, res) => {
+  LBReserve.find().exec((err, LBReserve) => {
     if (err) {
       return res.status(400).json({
         error: err,
@@ -29,34 +29,34 @@ router.get("/Library", (req, res) => {
     }
     return res.status(200).json({
       success: true,
-      existingPosts: Library,
+      LBReservePosts: LBReserve,
     });
   });
 });
 
 //get a specific post
-router.get("/Library/:id", (req, res) => {
-  let LibraryId = req.params.id;
+router.get("/LBReserve/:id", (req, res) => {
+  let LBReserveId = req.params.id;
 
-  Library.findById(LibraryId, (err, Library) => {
+  LBReserve.findById(LBReserveId, (err, LBReserve) => {
     if (err) {
       return res.status(400).json({ success: false, err });
     }
     return res.status(200).json({
       success: true,
-      Library,
+      LBReserve,
     });
   });
 });
 
 //update posts
-router.put("/Library/update/:id", (req, res) => {
-  Library.findByIdAndUpdate(
+router.put("/LBReserve/update/:id", (req, res) => {
+  LBReserve.findByIdAndUpdate(
     req.params.id,
     {
       $set: req.body,
     },
-    (err, Library) => {
+    (err, LBReserve) => {
       if (err) {
         return res.status(400).json({ error: err });
       }
@@ -64,12 +64,12 @@ router.put("/Library/update/:id", (req, res) => {
         success: "Update unccessfully",
       });
     }
-  );
+  ); 
 });
 
 //delete post
-router.delete("/Library/delete/:id", (req, res) => {
-  Library.findByIdAndRemove(req.params.id).exec((err, deletedPost) => {
+router.delete("/LBReserve/delete/:id", (req, res) => {
+  LBReserve.findByIdAndRemove(req.params.id).exec((err, deletedPost) => {
     if (err)
       return res.status(400).json({
         message: "Delete unsuccesful",
