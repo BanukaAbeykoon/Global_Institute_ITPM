@@ -74,7 +74,7 @@ class MainDashboard extends Component {
                     <div class="card-body">
                       <h5 class="card-title">Payment Management</h5>
 
-                      <a href="/SHdashboard" class="btn btn-primary">
+                      <a href="/Paymentdashboard" class="btn btn-primary">
                         Payment Management
                       </a>
                     </div>
