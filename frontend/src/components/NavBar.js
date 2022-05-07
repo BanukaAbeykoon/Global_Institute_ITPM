@@ -63,11 +63,23 @@ class SideNav extends Component {
                   <i class="fab fa-product-hunt"></i>
                   &nbsp; PAYMENTS
                 </button>
+
+                  <div className="dropdown-content">
+                  <a href="/Paymentdashboard">Dashboard</a>
+                  <a href="/PaymentHome">Payments</a>
+              
+             
+            
+            </div>
+            </div>
+              
+
                 <div className="dropdown-content">
                   <a href="/Coursedashboard">Dashboard</a>
                   <a href="/Paymentdashboard">Payments</a>
                 </div>
               </div>
+
             </li>
             <br />
             <li>
