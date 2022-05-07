@@ -55,7 +55,7 @@ import Studentdashboard from './components/StudentManagement/Studentdashboard';
 import StReports from './components/StudentManagement/StReports';
 import StudentReg from './components/StudentManagement/StudentReg';
 import StAdminHome from './components/StudentManagement/StAdminHome';
-
+import StudentLogin from './components/StudentManagement/StudentLogin';
 
 
 
@@ -103,6 +103,7 @@ export default class App extends Component {
           <Route path="/StReports"   component={StReports}></Route>
           <Route path="/StudentReg"   component={StudentReg}></Route>
           <Route path="/StAdminHome"   component={StAdminHome}></Route>
+          <Route path="/StudentLogin"   component={StudentLogin}></Route>
           <Route path="/studentadd"  component={StudentCreatePost}></Route>
           <Route path="/studentedit/:id"  component={StudentEditPost}></Route>
           <Route path="/student/:id"   component={StudentPostDetails}></Route>

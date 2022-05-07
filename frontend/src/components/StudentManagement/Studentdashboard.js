@@ -68,7 +68,7 @@ class Studentdashboard extends Component {
               <div class="card">
                 <img
                   src="students.jpg"
-                  width="600"
+                  width="400"
                   height="400"
                   class="card-img-top"
                   alt="..."
@@ -80,7 +80,7 @@ class Studentdashboard extends Component {
                     additional content.
                   </p>
                   {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Students</a> </button>
+                  <button className="btn btn-success"><a href="/StudentReg" style={{textDecoration:'none',color:'white'}}> Students</a> </button>
                    
                   {/* </a> */}
                 </div>
@@ -90,7 +90,7 @@ class Studentdashboard extends Component {
               <div class="card">
                 <img
                   src="payment.jpg"
-                  width="600"
+                  width="400"
                   height="400"
                   class="card-img-top"
                   alt="..."
@@ -124,10 +124,12 @@ class Studentdashboard extends Component {
                   </p>
                   <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Assignment</a> </button>
                 </div>
+
               </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
           </div>
+          
         </div>
       </div>
     );

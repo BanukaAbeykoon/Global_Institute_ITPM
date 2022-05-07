@@ -87,6 +87,50 @@ router.put('/student/update/:id',(req,res)=>{
                     message:"Delete Succesfull",deletedstudent
             });
     });
+
+
+
 });
+
+//Enrol
+
+router.post('/StudentLogin', async(req,res) => {
+    try{
+            const {studentName, studentID} = req.body;
+
+            if(!studentName || !studentID){
+
+                return res.status(400).json({error: "Please fill  all data"})
+
+            }
+            //check with database courseName
+            const StudentLogin = await student.findOne({studentName: studentName});
+            //console.log(studentLogin);
+  if(!StudentLogin){
+
+                res.status(400).json({error: "Student does not exists"});
+            }
+            else if (studentID == Login.studentID){
+                 res.json({message: "Student Enrollement  Successfull"});
+
+                console.log(res.status.error);
+
+            }else{
+
+                res.status(400).json({error: "Invalid Credientials"});
+            }
+
+    }catch(err){
+
+        console.log(err);
+
+    }
+
+
+});
+
+
+
+
 
 module.exports = router;
