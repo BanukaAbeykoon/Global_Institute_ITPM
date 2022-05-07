@@ -14,7 +14,14 @@ import Coursedashboard from './components/CourseManagement/Coursedashboard';
 import CourseReport from './components/CourseManagement/CourseReport';
 import CourseEnrollement from './components/CourseManagement/CourseEnrollement';
 
+//import Payment
 
+import PaymentCreatePost   from './components/PaymentManagement/PaymentCreatePost';
+import PaymentEditPost   from './components/PaymentManagement/PaymentEditPost';
+import PaymentHome   from './components/PaymentManagement/PaymentHome';
+import PaymentPostDetails   from './components/PaymentManagement/PaymentPostDetails';
+import Paymentdashboard from './components/PaymentManagement/Paymentdashboard';
+import PaymentReport from './components/PaymentManagement/PaymentReport';
 
 
 
@@ -70,6 +77,13 @@ export default class App extends Component {
           <Route path="/course/:id" component={CoursePostDetails}></Route>
           <Route path="/CourseReport" component={CourseReport}></Route>
           <Route path="/Enrol"   component={CourseEnrollement}></Route>
+
+          <Route path="/Paymentdashboard"   component={Paymentdashboard}></Route>
+         <Route path="/PaymentHome"   component={PaymentHome}></Route>
+         <Route path="/Paymentadd"  component={PaymentCreatePost}></Route>
+         <Route path="/Paymentedit/:id"  component={PaymentEditPost}></Route>
+         <Route path="/Payment/:id"   component={PaymentPostDetails}></Route>
+         <Route path="/PaymentReport"   component={PaymentReport}></Route>
 
 
 
