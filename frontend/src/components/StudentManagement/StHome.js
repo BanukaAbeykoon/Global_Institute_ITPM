@@ -129,7 +129,82 @@ class Studentdashboard extends Component {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          
+          <div class="row">
+
+          <div class="col-sm-4">
+              <div class="card">
+                <img
+                  src="ass.jpg"
+                  width="400"
+                  height="400"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Assignment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  {/* <a href="/CourseHome" class="btn btn-primary"> */}
+                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Assignment</a> </button>
+                   
+                  {/* </a> */}
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <img
+                  src="re.png"
+                  width="400"
+                  height="400"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Resources</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">
+               Resorces
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <img
+                  src="sup.png"
+                  width="400"
+                  height="400"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Support service</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">
+               Support Service
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+          </div>
           
         </div>
       </div>

@@ -110,7 +110,7 @@ router.post('/StudentLogin', async(req,res) => {
 
                 res.status(400).json({error: "Student does not exists"});
             }
-            else if (studentID == Login.studentID){
+            else if (studentID == StudentLogin.studentID){
                  res.json({message: "Student Enrollement  Successfull"});
 
                 console.log(res.status.error);
