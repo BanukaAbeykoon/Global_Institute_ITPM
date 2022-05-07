@@ -33,7 +33,7 @@ console.log("hello");
           console.log("hello world");
          
 
-             props.history.push("/Studentdashboard")
+             props.history.push("/StHome")
           }).catch((err) =>{
 
          console.log(err.response.data);
@@ -92,7 +92,7 @@ console.log("hello");
                   </form>
                   <hr class="mt-4"/>
                   <div class="col-12">
-                      <p class="text-center mb-0">Have not account yet? <a href="/Admin/Register">Signup</a></p>
+                      <p class="text-center mb-0">Have not account yet? <a href="/StudentReg">Signup</a></p>
                   </div>
               </div>
           </div>

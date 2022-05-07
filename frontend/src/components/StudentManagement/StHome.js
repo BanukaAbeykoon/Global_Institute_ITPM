@@ -74,13 +74,13 @@ class Studentdashboard extends Component {
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Students</h5>
+                  <h5 class="card-title">Course</h5>
                   <p class="card-text">
                     With supporting text below as a natural lead-in to
                     additional content.
                   </p>
                   {/* <a href="/CourseHome" class="btn btn-primary"> */}
-                  <button className="btn btn-success"><a href="/StudentLogin" style={{textDecoration:'none',color:'white'}}> Students</a> </button>
+                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Course</a> </button>
                    
                   {/* </a> */}
                 </div>
