@@ -124,7 +124,6 @@ class SideNav extends Component {
                
                </button>
                   <div className="dropdown-content">
-                  <a href="/Cdashboard">Student Admin Page</a>
                   <a href="/StaffAdminHome">Staff Admin Page</a>
               
              

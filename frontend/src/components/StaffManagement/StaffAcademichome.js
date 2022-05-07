@@ -61,14 +61,15 @@ class StaffAcademichome extends Component {
                 <img src={"academic7.png"}></img>
 
                 <div className="product_box">
-                    <h2>Dewmi Warnakulasooriya</h2>
-                    <p>Science</p>
+                    <h2>Dewmi Warnakulasooriya</h2><br/>
+                    <h3 style={{marginLeft:"55px"}}>Subject=<p1 style={{color:"yellow"}}>Science</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Qulification =<p1 style={{color:"yellow"}}>Bachelor of Science</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Phone num =<p1 style={{color:"yellow"}}>0772781901</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Email =<p1 style={{color:"yellow"}}>dewmi@gmail.com</p1></h3>
+
                 </div>
 
-                <div className="row_btn">
-                    <Link id="btn_view" to="/">View</Link>
-                    
-                </div>
+                
 
             </div>
 
@@ -76,14 +77,15 @@ class StaffAcademichome extends Component {
                 <img src={"academic5.jpg"}></img>
 
                 <div className="product_box">
-                    <h2>Baggya Senanayake</h2>
-                    <p>Maths</p>
+                    <h2>Baggya Senanayake</h2><br/>
+                    <h3 style={{marginLeft:"55px"}}>Subject=<p1 style={{color:"yellow"}}>Maths</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Qulification =<p1 style={{color:"yellow"}}>Degree in aus uni</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Phone num =<p1 style={{color:"yellow"}}>0772867890</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Email =<p1 style={{color:"yellow"}}>Senanayake@gmail.com</p1></h3>
+
                 </div>
 
-                <div className="row_btn">
-                    <Link id="btn_view" to="#!">View</Link>
-                    
-                </div>
+                
 
             </div>
 
@@ -92,14 +94,15 @@ class StaffAcademichome extends Component {
                 <img src={"academic1.jpg"}></img>
 
                 <div className="product_box">
-                    <h2>Hasiru Dulanjaya</h2>
-                    <p>Maths</p>
+                    <h2>Hasiru Dulanjaya</h2><br/>
+                    <h3 style={{marginLeft:"55px"}}>Subject=<p1 style={{color:"yellow"}}>Maths</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Qulification =<p1 style={{color:"yellow"}}>BSc in Maths</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Phone num =<p1 style={{color:"yellow"}}>0778090987</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Email =<p1 style={{color:"yellow"}}>hasi@gmail.com</p1></h3>
+
                 </div>
 
-                <div className="row_btn">
-                    <Link id="btn_view" to="#!">View </Link>
-                    
-                </div>
+                
 
             </div>
 
@@ -107,14 +110,14 @@ class StaffAcademichome extends Component {
                 <img src={"academic6.png"}></img>
 
                 <div className="product_box">
-                    <h2>Deshan Amarasooriya</h2>
-                    <p>Science</p>
+                    <h2>Deshan Amarasooriya</h2><br/>
+                    <h3 style={{marginLeft:"55px"}}>Subject=<p1 style={{color:"yellow"}}>Science</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Qulification =<p1 style={{color:"yellow"}}>BSc in Science</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Phone num =<p1 style={{color:"yellow"}}>0716441398</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Email =<p1 style={{color:"yellow"}}>deshan@gmail.com</p1></h3>
                 </div>
 
-                <div className="row_btn">
-                    <Link id="btn_view" to="#!">View </Link>
-                    
-                </div>
+                
 
             </div>
 
@@ -122,14 +125,15 @@ class StaffAcademichome extends Component {
                 <img src={"academic4.jpg"}></img>
 
                 <div className="product_box">
-                    <h2>Supipi Senethma</h2>
-                    <p>Maths</p>
+                    <h2>Supipi Senethma</h2><br/>
+                    <h3 style={{marginLeft:"55px"}}>Subject=<p1 style={{color:"yellow"}}>Maths</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Qulification =<p1 style={{color:"yellow"}}>UOK Degree</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Phone num =<p1 style={{color:"yellow"}}>0772779667</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Email =<p1 style={{color:"yellow"}}>supipi@gmail.com</p1></h3>
+
                 </div>
 
-                <div className="row_btn">
-                    <Link id="btn_view" to="#!">View </Link>
-                    
-                </div>
+                
 
             </div>
 
@@ -139,15 +143,15 @@ class StaffAcademichome extends Component {
                 <img src={"academic3.jpg"}></img>
 
                 <div className="product_box">
-                    <h2>Sashintha Dasanayaka</h2>
-                    <p>Science</p>
-                </div>
-
-                <div className="row_btn">
-                    <Link id="btn_view" to="#!">View</Link>
-                    
+                    <h2>Srivanka Prabath</h2><br/>
+                    <h3 style={{marginLeft:"55px"}}>Subject=<p1 style={{color:"yellow"}}>Science</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Qulification =<p1 style={{color:"yellow"}}>BSCS Biology</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Phone num =<p1 style={{color:"yellow"}}>0779597171</p1></h3>
+                    <h3 style={{marginLeft:"55px"}}>Email =<p1 style={{color:"yellow"}}>srivanka@gmail.com</p1></h3>
 
                 </div>
+
+                
 
             </div>
             </div>
@@ -160,5 +164,4 @@ class StaffAcademichome extends Component {
     
   }
 }
-
 export default StaffAcademichome;
