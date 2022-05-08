@@ -76,8 +76,7 @@ class Studentdashboard extends Component {
                 <div class="card-body">
                   <h5 class="card-title">Students</h5>
                   <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
+                  The	Student	Administration	section	is	responsible	for	all	central	administrative	functions	involved.
                   </p>
                   {/* <a href="/CourseHome" class="btn btn-primary"> */}
                   <button className="btn btn-success"><a href="StudentHome" style={{textDecoration:'none',color:'white'}}> Students</a> </button>
@@ -97,12 +96,11 @@ class Studentdashboard extends Component {
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Reporting</h5>
+                  <h5 class="card-title">Reportes</h5>
                   <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
+                  These reports are meant to show the students progress in the classroom, and display the grade that the student has earned in each subject.
                   </p>
-                  <button className="btn btn-success"><a href="/StReports" style={{textDecoration:'none',color:'white'}}> Reporting</a> </button>
+                  <button className="btn btn-success"><a href="/StReports" style={{textDecoration:'none',color:'white'}}> Reportes</a> </button>
                 </div>
               </div>
             </div>
