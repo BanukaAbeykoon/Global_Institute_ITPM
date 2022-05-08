@@ -128,7 +128,7 @@ export default class StudentCreatePost extends Component {
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
-      <h1 className="h3 mb-3 font-weight-normal" style={{color: '#ffffff'}}>Register New Student</h1>
+      <h1 className="h3 mb-3 font-weight-normal" style={{color: '#00FA9A'}}>Register New Student</h1>
       <form className="needs-validation" noValidate>
         <div className="form-group" style={{marginBottom:'15px'}}>
           <label style={{color: '#00CED1',marginBottom:'5px'}} >Student Name </label>
