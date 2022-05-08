@@ -58,6 +58,9 @@ export default class LBReserveCreate extends Component {
     if (!this.state.pno) {
       pnoError = "* Phone Number is Required!";
     }
+    else if (!this.state.pno.toString().match(/^[0-9]{10}$/)) {
+      pnoError = "*Please Enter valid Telephone Number!";
+    }
 
     if (!this.state.date) {
       dateError = "* Date is Required!";
