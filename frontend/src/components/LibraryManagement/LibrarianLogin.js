@@ -49,10 +49,14 @@ export default function Librarylogin(props) {
   }
 
   return (
-    <div class="container">
+    <div class="container"style={{opacity:"85%"}}>
       <div class="row">
-        <div class="col-md-4 offset-md-4">
-          <div class="login-form bg-light mt-4 p-4">
+        <div class="col-md-6 offset-md-4">
+          <div class="login-form bg-light mt-4 p-4" >
+
+<div class="card-body p-4 p-lg-5 text-black">
+
+
             <form action="" method="" class="row g-3" onSubmit={Loginuser}>
               <h4>Welcome </h4>
               <h6 id="AdminLoginError" style={{ color: "red" }}>
@@ -104,15 +108,16 @@ export default function Librarylogin(props) {
                 </button>
               </div>
             </form>
+</div>
+</div>
+
             <hr class="mt-4" />
-            <div class="col-12">
-              <p class="text-center mb-0">
-                Have not account yet? <a href="#">Signup</a>
-              </p>
-            </div>
-          </div>
+          
+          &nbsp;&nbsp;
         </div>
+        &nbsp;&nbsp;
       </div>
+      &nbsp;&nbsp;
     </div>
   );
 }
