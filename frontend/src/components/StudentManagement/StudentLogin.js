@@ -33,7 +33,7 @@ console.log("hello");
           console.log("hello world");
          
 
-             props.history.push("/Studentdashboard")
+             props.history.push("/StHome")
           }).catch((err) =>{
 
          console.log(err.response.data);
