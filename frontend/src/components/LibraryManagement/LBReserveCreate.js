@@ -7,7 +7,7 @@ export default class LBReserveCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Book_ID: "",
+      Book_ID: Date.now(),
       Book_Name: "",
       NIC: "",
       pno: "",
@@ -21,7 +21,6 @@ export default class LBReserveCreate extends Component {
       dateError: ",",
       usernameError: ",",
       PasswordError: ",",
-     
     };
   }
 
@@ -68,11 +67,14 @@ export default class LBReserveCreate extends Component {
       
       if (!this.state.username) {
         usernameError = "* Username is Required!";
-      }
-
-      if (!this.state.Password) {
-        PasswordError = "* Password is Required!";
-      }
+      } else if (
+        !this.state.username.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)){
+         usernameError = "* Valid email Required!";
+        }
+      
+        if (!this.state.Password) {
+          PasswordError = "* Password is Required!";
+        }
 
     if (
       Book_IDError ||
@@ -203,7 +205,7 @@ export default class LBReserveCreate extends Component {
           <h1 className="h3 mb-3 font-weight-normal">ADD Reserved BOOK</h1>
         </div>
         <form className="needs-validation" noValidate>
-          <div className="form-group" style={{ marginBottom: "15px" }}>
+          {/* <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Book ID </label>
             <input
               type="number"
@@ -212,11 +214,12 @@ export default class LBReserveCreate extends Component {
               placeholder="Enter Book ID"
               value={this.state.Book_ID}
               onChange={this.handleInputChange}
+              readonly
             />
             <div style={{ fontSize: 12, color: "red" }}>
               {this.state.Book_IDError}
             </div>
-          </div>
+          </div> */}
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Book Name </label>
             <input
