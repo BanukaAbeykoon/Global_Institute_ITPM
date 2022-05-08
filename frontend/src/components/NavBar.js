@@ -8,6 +8,8 @@ class SideNav extends Component {
         <div id="sidebar-wrapper">
           <ul className="sidebar-nav">
             &nbsp; &nbsp; &nbsp;
+            <br />
+            <br />
             <img
               src="%PUBLIC_URL%../../../global.png"
               class="rounded-circle"
@@ -65,15 +67,20 @@ class SideNav extends Component {
                   &nbsp; PAYMENTS
                 </button>
 
-                  <div className="dropdown-content">
+                <div className="dropdown-content">
                   <a href="/Paymentdashboard">Dashboard</a>
                   <a href="/PaymentHome">Payments</a>
+
+                </div>
+              </div>
+
                   <a href="/payreportDashboard">Reports</a>
               
              
             
             </div>
             </div>
+
             </li>
             <br />
             <li>

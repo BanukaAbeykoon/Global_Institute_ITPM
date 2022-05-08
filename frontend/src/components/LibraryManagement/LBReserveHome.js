@@ -203,7 +203,7 @@ export default class LBReserveHome extends Component {
                 </div>
               </div>
               <hr></hr>
-              <button className="btn btn-success">
+              <button className="btn btn-primary btn-lg">
                 <a
                   href="/AddLBR"
                   style={{ textDecoration: "none", color: "white" }}
