@@ -45,7 +45,7 @@ export default class StudentEditPost extends Component {
 
         axios.put(`http://localhost:8000/student/update/${id}`, data).then((res) => {
           if(res.data.success){
-            swal.fire("Updated", "updated Successfully", "success");
+            swal.fire("Updated", "Updated Successfully", "success");
             this.setState({
               studentName:"studentName",
               studentID:"studentID",

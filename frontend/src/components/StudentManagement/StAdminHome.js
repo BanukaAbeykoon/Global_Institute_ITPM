@@ -39,22 +39,18 @@ class Studentdashboard extends Component {
                             Home -
                           </a>
                         </li>
+                        <li className="nav-item d-none d-sm-inline-block">
+                          <a href="#" className="nav-link">
+                           Admin
+                          </a>
+                        </li>
 
                         <li className="nav-item d-none d-sm-inline-block">
-                          <a href="/Studentdashbord" className="nav-link">
-                           Student Dashboard -
+                          <a href="/StAdminHome" className="nav-link">
+                           Student Admin Home Page 
                           </a>
                         </li>
-                        <li className="nav-item d-none d-sm-inline-block">
-                          <a href="/StudentHome" className="nav-link">
-                            student Courses -
-                          </a>
-                        </li>
-                        <li className="nav-item d-none d-sm-inline-block">
-                          <a href="/addph" className="nav-link">
-                            Dash Board -
-                          </a>
-                        </li>
+                        
                       </ul>
                     </div>
                   </div>

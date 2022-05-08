@@ -31,7 +31,7 @@ export default class StudentHome extends Component {
 
 onDelete = (id) =>{
   axios.delete(`http://localhost:8000/student/delete/${id}`).then((res) =>{
-    swal.fire("Deleted", "deleted Successfully", "success");
+    swal.fire("Deleted", "Deleted Successfully", "success");
     this.retrievestudent();
   })
 }
