@@ -71,7 +71,7 @@ handleSearchArea = (e) =>{
         <div id="page-content-wrapper"></div>
       <div className ="container-sm">
       <div className="row">
-      <div className="col-lg-9 mt-2 mb-2">
+      <div className="col-lg-9 mt-2 mb-2" style={{color: 'yellow'}}>
         <h4>All Student Details</h4>
         </div>
         <div className ="col-lg-3 mt-2 mb-2">
@@ -86,7 +86,7 @@ handleSearchArea = (e) =>{
           </div>
           </div>
           </div>
-        <table className="table">
+        <table className="table" style={{color: '#FFFFFF',marginTop:'40px'}}>
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -105,7 +105,7 @@ handleSearchArea = (e) =>{
                 <th scope="row">{index+1}</th>
                 
                 <td>
-                    <a href={`/student/${student._id}`} style={{textDecoration:'none'}}> 
+                    <a href={`/student/${student._id}`} style={{color: 'orange',textDecoration:'none'}}> 
                     {student.studentName} 
                     </a> 
                     </td>
