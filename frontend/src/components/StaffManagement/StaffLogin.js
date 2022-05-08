@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 //import { useNavigate } from 'react-router-dom';
 
 //import "../../css/login.css";
@@ -38,7 +39,7 @@ console.log("hello");
             localStorage.setItem("name", name);
             
             console.log(loginCredentials);
-          alert("login success");
+            Swal.fire('Successfully Login!',  'You clicked the button!',  'success')
           seterrormsg("");
           console.log("hello world");
           props.history.push("/StaffDashboard");
@@ -48,9 +49,22 @@ console.log("hello");
 
           }).catch((err) =>{
 
-         console.log(err.response.data);
-          alert("Invalid login");
-         seterrormsg(err.response.data.error);
+            console.log(err.response.data);
+          
+
+
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Please Check Your UserName & Password!',
+              showClass: {
+                popup: 'animate_animated animate_fadeInDown'
+              },
+              hideClass: {
+                popup: 'animate_animated animate_fadeOutUp'
+              }
+            })
+           seterrormsg(err.response.data.error);
         
 
         })
