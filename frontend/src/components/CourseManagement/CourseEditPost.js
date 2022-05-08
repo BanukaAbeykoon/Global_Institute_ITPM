@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import swal from "sweetalert2";
+import moment from "moment";
 
 export default class CourseEditPost extends Component {
   
@@ -120,12 +121,13 @@ export default class CourseEditPost extends Component {
 
         <div className="form-group" style={{color:'#FFFFFF' ,marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}}>Date</label>
-          <input type="text"
+          <input type="Date"
           className="form-control"
           name="date"
           placeholder="Enter Date"
           value={this.state.date}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}
+          max={moment().format("YYYY-MM-DD")}/>
         </div>
 
         <div className="form-group" style={{color:'#FFFFFF' ,marginBottom:'15px'}}>
