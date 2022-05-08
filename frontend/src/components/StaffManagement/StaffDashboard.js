@@ -57,7 +57,7 @@ class StaffDashboard extends Component {
           <br />
           <div class="row">
             <div class="col-sm-4">
-              <div class="card">
+              <div class="cardb">
                 <img
                   src="staff.png"
                   width="400"
@@ -65,9 +65,9 @@ class StaffDashboard extends Component {
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body">
+                <div class="cardb-body">
                   {/* <a href="/StaffHome" class="btn btn-primary"> */}
-                  <button className="btn btn-primary">
+                  <button className="cardb-button">
                     <a
                       href="/StaffAcademichome"
                       style={{ textDecoration: "none", color: "white" }}
@@ -81,7 +81,7 @@ class StaffDashboard extends Component {
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="card">
+              <div class="cardb">
                 <img
                   src="non1.jpeg"
                   width="400"
@@ -89,15 +89,17 @@ class StaffDashboard extends Component {
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body">
-                  <a href="/StaffNonacademichome" class="btn btn-primary">
+                <div class="cardb-body">
+                <button className="cardb-button">
+                  <a href="/StaffNonacademichome" style={{ textDecoration: "none", color: "white" }}>
                     NonAcademic Staff
                   </a>
+                  </button>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="card">
+              <div class="cardb">
                 <img
                   src="report.png"
                   width="300"
@@ -105,15 +107,16 @@ class StaffDashboard extends Component {
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body">
-                  <a href="/StaffReport" class="btn btn-primary">
+                <div class="cardb-body">
+                <button className="cardb-button">
+                  <a href="/StaffReport" style={{ textDecoration: "none", color: "white" }}>
                     Report
                   </a>
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
-          </div>
+            </div>
         </div>
       </div>
     );
