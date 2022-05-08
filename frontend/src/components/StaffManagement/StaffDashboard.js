@@ -38,7 +38,7 @@ class StaffDashboard extends Component {
             <div class="col-sm-4">
               <div class="card">
                 <img
-                  src="non1.jpeg"
+                  src="non4.jpeg"
                   width="400"
                   height="400"
                   class="card-img-top"
