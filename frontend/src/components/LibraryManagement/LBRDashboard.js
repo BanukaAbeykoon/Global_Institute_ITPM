@@ -61,20 +61,20 @@ class LBDashboard extends Component {
                   </div>
                 </div>
               </div>
-              <br /> <br /> <br /> 
+              <br /> <br /> <br />
               <div class="row">
                 <div
-                  class="card"
+                  class="cardb"
                   style={{ opacity: "75%", width: "80%", left: "10%" }}
                 >
                   <div class="card-header"></div>
                   <div class="card-body">
-                    <h5 class="card-title">Monthly Report</h5>
+                    <h5 class="card-title">Monthly Report Of Library Books</h5>
                     <p class="card-text">
                       Click hear to get the mothly report of all the Library
                       Book Details
                     </p>
-                    <a href="LBReport" class="btn btn-primary">
+                    <a href="LBReport" class="btn btn-dark">
                       Library Books Report
                     </a>
                   </div>
@@ -82,22 +82,22 @@ class LBDashboard extends Component {
                 <hr></hr>
                 <br /> <br />
                 <div
-                  class="card"
+                  class="cardb"
                   style={{ opacity: "75%", width: "80%", left: "10%" }}
                 >
-                  <div class="card">
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                      <h5 class="card-title">Monthly Report</h5>
-                      <p class="card-text">
-                        Click hear to get the mothly report of all the
-                        student/staff Details that who use the books in the
-                        Library
-                      </p>
-                      <a href="LBR_Report" class="btn btn-primary">
-                        Library Book Users Report
-                      </a>
-                    </div>
+                  <div class="card-header"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Monthly Report Of Library Book Users{" "}
+                    </h5>
+                    <p class="card-text">
+                      Click hear to get the mothly report of all the
+                      student/staff Details that who use the books in the
+                      Library
+                    </p>
+                    <a href="LBR_Report" class="btn btn-dark">
+                      Library Book Users Report
+                    </a>
                   </div>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
