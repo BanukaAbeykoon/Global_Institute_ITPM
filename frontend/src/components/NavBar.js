@@ -72,14 +72,6 @@ class SideNav extends Component {
             
             </div>
             </div>
-              
-
-                <div className="dropdown-content">
-                  <a href="/Coursedashboard">Dashboard</a>
-                  <a href="/Paymentdashboard">Payments</a>
-                </div>
-             
-
             </li>
             <br />
             <li>
