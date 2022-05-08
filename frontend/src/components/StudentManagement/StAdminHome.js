@@ -106,6 +106,48 @@ class Studentdashboard extends Component {
                 </div>
               </div>
             </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <img
+                  src="plan.jpg"
+                  width="900"
+                  height="400"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Academic Planner</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <button className="btn btn-success"><a href="/StReports" style={{textDecoration:'none',color:'white'}}> Academic Planner</a> </button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
           </div>
         </div>
