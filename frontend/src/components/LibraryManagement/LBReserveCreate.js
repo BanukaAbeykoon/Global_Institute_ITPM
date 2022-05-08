@@ -294,7 +294,7 @@ export default class LBReserveCreate extends Component {
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Password</label>
             <input
-              type="text"
+              type="password"
               className="form-control"
               name="Password"
               placeholder="Enter Password"

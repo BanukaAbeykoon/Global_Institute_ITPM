@@ -259,7 +259,7 @@ export default class Librarian extends Component {
               </div>
               <hr></hr>
               <br />
-              <button className="btn btn-success">
+              <button className="btn btn-primary btn-lg">
                 <a
                   href="/AddLB"
                   style={{ textDecoration: "none", color: "white" }}
