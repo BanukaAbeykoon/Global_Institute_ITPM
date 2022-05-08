@@ -157,7 +157,7 @@ export default class StudentHome extends Component {
                     <th scope="row">{index+1}</th>
                     
                     <td>
-                        <a href={`/student/${student._id}`} style={{textDecoration:'none'}}> 
+                        <a href={`/student/${student._id}`} style={{color: 'yellow',textDecoration:'none'}}> 
                         {student.studentName} 
                         </a> 
                         </td>
