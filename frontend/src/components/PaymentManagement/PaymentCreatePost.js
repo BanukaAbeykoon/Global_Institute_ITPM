@@ -206,8 +206,8 @@ export default class PaymentCreatePost extends Component {
         </div>
 
         <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
-          <label style={{marginBottom:'5px'}} >Password  </label>
-          <input type="text"
+          <label style={{marginBottom:'5px'}} >Password </label>
+          <input type="password"
           className="form-control"
           name="password"
           placeholder="Enter Password"

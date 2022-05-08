@@ -132,7 +132,7 @@ export default class PaymentEditPost extends Component {
 
         <div className="form-group" style={{color:'#FFFFFF' ,marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}}>Password</label>
-          <input type="text"
+          <input type="password"
           className="form-control"
           name="password"
           placeholder="Enter Password"
