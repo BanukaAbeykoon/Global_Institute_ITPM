@@ -291,7 +291,7 @@ export default class Librarian extends Component {
                         <h6>Author:{Library.author} </h6>
                         <h6>Related Module:{Library.relatedmodule} </h6>
                         <h6>Book Status:{Library.bookstatus} </h6>
-                        <h6>username:{Library.username} </h6>
+                        <h6>E-mail:{Library.username} </h6>
                         <h6>Password:{Library.Password} </h6>
                         <a
                           className="btn btn-warning"
