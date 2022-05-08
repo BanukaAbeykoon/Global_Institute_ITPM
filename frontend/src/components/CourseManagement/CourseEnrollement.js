@@ -64,7 +64,7 @@ console.log("hello");
           <div class="col-md-4 offset-md-4">
               <div class="login-form bg-light mt-4 p-4">
                   <form action="" method="" class="row g-3" onSubmit={EnrolUser}>
-                      <h4>Welcome Back</h4>
+                      <h4>Enrol Course</h4>
                       <h6 id="AdminLoginError" style={{color:"red"}}>{errorMsg}</h6>
                       <div class="col-12">
                           <label>Course Name</label>

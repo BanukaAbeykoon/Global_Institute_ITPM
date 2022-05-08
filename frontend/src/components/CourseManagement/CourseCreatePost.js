@@ -133,7 +133,7 @@ export default class CourseCreatePost extends Component {
         
 ?
 
-        {/* <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
+        <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Course Name </label>
           <input type="text"
           className="form-control"
@@ -148,7 +148,7 @@ export default class CourseCreatePost extends Component {
                     {this.state.courseNameError}
                    
         </div>
-        </div> */}
+        </div>
 
         <div className="form-group" style={{color:'#FFFFFF',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Subject </label>
@@ -185,7 +185,8 @@ export default class CourseCreatePost extends Component {
           name="fee"
           placeholder="Enter Fee"
           value={this.state.fee}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}
+          />
 
        <div style={{ fontSize: 12, color: "red" }}>
                     {this.state.feeError}
