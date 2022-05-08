@@ -51,6 +51,8 @@ import LBReserveEdit from "./components/LibraryManagement/LBReserveEdit";
 import LBR_Report from "./components/LibraryManagement/LBR_Report";
 import LBRDashboard from "./components/LibraryManagement/LBRDashboard";
 import Librarian from "./components/LibraryManagement/Librarian";
+import LibrarianLogin from "./components/LibraryManagement/LibrarianLogin";
+
 
 
 //Student Components
@@ -132,12 +134,16 @@ export default class App extends Component {
         <Route path="/AddLB" component={LibraryCreatePost}></Route>
         <Route path="/EditLB/:id" component={LibraryEditPost}></Route>
         <Route path="/Librarian" component={Librarian}></Route>
-        <Route path="/LibraryPostDetails/:id"component={LibraryPostDetails}></Route>
+        <Route
+          path="/LibraryPostDetails/:id"
+          component={LibraryPostDetails}
+        ></Route>
         <Route path="/AddLBR" component={LBReserveCreate}></Route>
         <Route path="/LBReserveHome" component={LBReserveHome}></Route>
         <Route path="/EditLBR/:id" component={LBReserveEdit}></Route>
         <Route path="/LBR_Report" component={LBR_Report}></Route>
         <Route path="/LBRDashboard" component={LBRDashboard}></Route>
+        <Route path="/LibrarianLogin" component={LibrarianLogin}></Route>
       </BrowserRouter>
     );
   }

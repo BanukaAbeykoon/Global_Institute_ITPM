@@ -32,16 +32,12 @@ const staffRouter=require("./routes/Staff/staff");
 //import route Library
 const LibraryRoutes = require("./routes/Library/Library");
 const LBReserveRoutes = require("./routes/Library/LBReserve");
+const LibrarianRoutes = require("./routes/Library/Librarian");
 
 //import route payment
 const paymentRouter=require("./routes/Payments/payment");
 //import routes students
 const studentRoutes = require('./routes/Student/student');
-
-
-
-
-
 
 //app.use course router
 app.use(courseRouter);
@@ -51,6 +47,7 @@ app.use(staffRouter);
 //route middleware Library
 app.use(LibraryRoutes);
 app.use(LBReserveRoutes);
+app.use(LibrarianRoutes);
 
 //app.use payment router
 app.use(paymentRouter);
