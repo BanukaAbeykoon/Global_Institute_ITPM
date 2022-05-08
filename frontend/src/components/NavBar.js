@@ -109,7 +109,7 @@ class SideNav extends Component {
                   &nbsp; REPORTS
                 </button>
                 <div className="dropdown-content">
-                  <a href="/Streport">Student</a>
+                  <a href="/StReports">Student</a>
                   <a href="/StaffReport">Staff</a>
                   <a href="/CourseReport">Courses</a>
                   <a href="/LBReport">Library</a>
