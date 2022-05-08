@@ -118,7 +118,7 @@ class Studentdashboard extends Component {
                   ibrary, traditionally, collection of books used for reading or study, or the building or room in which such a collection is kept.
                     
                   </p>
-                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Library</a> </button>
+                  <button className="btn btn-success"><a href="/LBDashboard" style={{textDecoration:'none',color:'white'}}> Library</a> </button>
                 </div>
 
               </div>
