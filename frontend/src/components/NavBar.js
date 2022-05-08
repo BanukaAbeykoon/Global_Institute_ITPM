@@ -53,6 +53,7 @@ class SideNav extends Component {
                 <div className="dropdown-content">
                   <a href="/Coursedashboard">Dashboard</a>
                   <a href="/CourseHome">Courses Home</a>
+                  <a href="/payreportDashboard">Reports</a>
                 </div>
               </div>
             </li>
@@ -67,6 +68,7 @@ class SideNav extends Component {
                   <div className="dropdown-content">
                   <a href="/Paymentdashboard">Dashboard</a>
                   <a href="/PaymentHome">Payments</a>
+                  <a href="/payreportDashboard">Reports</a>
               
              
             
