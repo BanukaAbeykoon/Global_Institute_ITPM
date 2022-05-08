@@ -128,10 +128,10 @@ export default class StudentCreatePost extends Component {
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
-      <h1 className="h3 mb-3 font-weight-normal">Register New Student</h1>
+      <h1 className="h3 mb-3 font-weight-normal" style={{color: '#ffffff'}}>Register New Student</h1>
       <form className="needs-validation" noValidate>
         <div className="form-group" style={{marginBottom:'15px'}}>
-          <label style={{marginBottom:'5px'}} >Student Name </label>
+          <label style={{color: '#00CED1',marginBottom:'5px'}} >Student Name </label>
           <input type="text"
           className="form-control"
           name="studentName"
@@ -143,7 +143,7 @@ export default class StudentCreatePost extends Component {
         </div>
         </div>
 
-        <div className="form-group" style={{marginBottom:'15px'}}>
+        <div className="form-group" style={{color: '#00CED1',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Student ID </label>
           <input type="text"
           className="form-control"
@@ -156,7 +156,7 @@ export default class StudentCreatePost extends Component {
         </div>
         </div>
 
-        <div className="form-group" style={{marginBottom:'15px'}}>
+        <div className="form-group" style={{color: '#00CED1',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}} >Course Name </label>
           <input type="text"
           className="form-control"
@@ -169,7 +169,7 @@ export default class StudentCreatePost extends Component {
         </div>
         </div>
 
-        <div className="form-group" style={{marginBottom:'15px'}}>
+        <div className="form-group" style={{color: '#00CED1',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}}>Email</label>
           <input type="email"
           className="form-control"
@@ -184,7 +184,7 @@ export default class StudentCreatePost extends Component {
         </div>
         </div>
 
-        <div className="form-group" style={{marginBottom:'15px'}}>
+        <div className="form-group" style={{color: '#00CED1',marginBottom:'15px'}}>
           <label style={{marginBottom:'5px'}}>Phone No</label>
           <input type="number"
           className="form-control"
