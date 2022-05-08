@@ -37,10 +37,8 @@ export default class LibraryCreatePost extends Component {
     let booknameError = "";
     let authorError = "";
     let relatedmoduleError = "";
-    let bookstatusError = "";
-    let usernameError = "";
-    let PasswordError = "";
-
+    let bookstatusError = ""
+   
     if (!this.state.bookid) {
       bookidError = "* BookID is Required!";
     }
@@ -61,22 +59,14 @@ export default class LibraryCreatePost extends Component {
       bookstatusError = "* Book Status is Required!";
     }
 
-    if (!this.state.username) {
-      usernameError = "* Username is Required!";
-    }
-
-    if (!this.state.Password) {
-      PasswordError = "* Password is Required!";
-    }
 
     if (
       bookidError ||
       booknameError ||
       authorError ||
       relatedmoduleError ||
-      bookstatusError ||
-      usernameError ||
-      PasswordError
+      bookstatusError 
+     
     ) {
       this.setState({
         bookidError,
@@ -84,8 +74,7 @@ export default class LibraryCreatePost extends Component {
         authorError,
         relatedmoduleError,
         bookstatusError,
-        usernameError,
-        PasswordError,
+      
       });
 
       return false;

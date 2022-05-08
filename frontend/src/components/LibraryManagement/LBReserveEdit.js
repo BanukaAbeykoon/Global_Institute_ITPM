@@ -57,14 +57,19 @@ export default class LBReserveEdit extends Component {
 
     if (!this.state.pno) {
       pnoError = "* Phone Number is Required!";
+    } else if (!this.state.pno.toString().match(/^[0-9]{10}$/)) {
+      pnoError = "*Please Enter valid Telephone Number!";
     }
-
     if (!this.state.date) {
       dateError = "* Date is Required!";
     }
 
     if (!this.state.username) {
       usernameError = "* Username is Required!";
+    } else if (
+      !this.state.username.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)
+    ) {
+      usernameError = "* Valid email Required!";
     }
 
     if (!this.state.Password) {
@@ -319,7 +324,7 @@ export default class LBReserveEdit extends Component {
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}> Password</label>
             <input
-              type="text"
+              type="password"
               className="form-control"
               name="Password"
               placeholder="Enter Password"
