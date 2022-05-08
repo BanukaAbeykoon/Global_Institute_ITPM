@@ -147,7 +147,7 @@ export default class StudentHome extends Component {
                   <th scope="col">Course Name</th>
                   <th scope="col">Email</th>
                   <th scope="col">Phone No</th>
-                  <th scope="col">Action</th>
+                  
                 </tr>
               </thead>
               <tbody>
