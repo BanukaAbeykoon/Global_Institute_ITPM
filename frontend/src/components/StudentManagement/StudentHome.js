@@ -78,7 +78,7 @@ handleSearchArea = (e) =>{
           <input 
           className="form-control"
           type="search"
-          placeholder="search"
+          placeholder="Search Students"
           name="searchQuery"
           onChange ={this.handleSearchArea}>
 

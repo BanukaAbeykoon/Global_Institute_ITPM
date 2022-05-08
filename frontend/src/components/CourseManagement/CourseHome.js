@@ -112,7 +112,7 @@ handleSearchArea = (e) =>{
                 <td>{course.courseID}</td>
                 <td>{course.subject}</td>
                 <td>{course.date}</td>
-                <td>{course.fee}</td>
+                <td>Rs {course.fee}</td>
                
                 <td>
                   <a className="btn btn-warning" href={`/edit/${course._id}`}>

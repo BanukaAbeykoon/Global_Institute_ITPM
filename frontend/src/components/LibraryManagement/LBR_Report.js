@@ -278,7 +278,7 @@ export default class LBR_Report extends Component {
                   class="btn btn-secondary btn-sm"
                   onClick={() => generatePDF(this.state.LBReserve)}
                 >
-                  Downloard As
+                  Download As
                   <div class="docs">
                     <svg
                       class="css-i6dzq1"

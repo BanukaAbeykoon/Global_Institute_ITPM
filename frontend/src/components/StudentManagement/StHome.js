@@ -73,8 +73,7 @@ class Studentdashboard extends Component {
                 <div class="card-body">
                   <h5 class="card-title">Faculties</h5>
                   <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
+                  Faculty is defined as all the members of a profession or the group of teachers at a specific educational organization.
                   </p>
                   {/* <a href="/CourseHome" class="btn btn-primary"> */}
                   <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Faculties</a> </button>
@@ -95,8 +94,8 @@ class Studentdashboard extends Component {
                 <div class="card-body">
                   <h5 class="card-title">Course</h5>
                   <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
+                  In higher education a course is a unit of teaching that typically lasts one academic
+                   term, is led by one or more instructors (teachers or professors),
                   </p>
                   <a href="#" class="btn btn-primary">
                Course
@@ -116,10 +115,10 @@ class Studentdashboard extends Component {
                 <div class="card-body">
                   <h5 class="card-title">Library</h5>
                   <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
+                  ibrary, traditionally, collection of books used for reading or study, or the building or room in which such a collection is kept.
+                    
                   </p>
-                  <button className="btn btn-success"><a href="#" style={{textDecoration:'none',color:'white'}}> Library</a> </button>
+                  <button className="btn btn-success"><a href="/LBDashboard" style={{textDecoration:'none',color:'white'}}> Library</a> </button>
                 </div>
 
               </div>
